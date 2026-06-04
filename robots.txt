@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /lead-magnet-*
+Disallow: /404.html
+
+# SEO: Crawl priority
+Sitemap: https://lifesystemos.com/sitemap.xml
+
+# RSS Feed
+Feed: https://lifesystemos.com/feed.xml
+
+# Crawl rate optimization
+Crawl-Delay: 1

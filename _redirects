@@ -1,0 +1,2 @@
+# LifeSystemOS Redirects
+/short/*  /articles/:splat  301
