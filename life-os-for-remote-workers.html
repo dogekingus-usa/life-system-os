@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life OS for Remote Workers: Build Your Ultimate Productivity System | LifeSystemOS</title>
+  <link rel="canonical" href="https://lifesystemos.com/life-os-for-remote-workers">
+  
+  <meta name="description" content="Stop juggling 15 apps and sticky notes. Learn how to build a Life OS for remote work — a unified productivity system combining task management, calendar, notes, and routines into one seamless workflow.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; line-height: 1.8; }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 2.2rem; color: #0f172a; margin-bottom: 0.5rem; line-height: 1.3; }
+    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+    h2 { color: #0f172a; font-size: 1.5rem; margin: 2rem 0 1rem; border-left: 4px solid #d97706; padding-left: 0.8rem; }
+    h3 { color: #1e293b; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+    p { margin-bottom: 1.2rem; color: #334155; }
+    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #334155; }
+    li { margin-bottom: 0.5rem; }
+    .highlight-box { background: #fffbeb; border-left: 4px solid #d97706; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+    .highlight-box p { margin-bottom: 0; }
+    strong { color: #0f172a; }
+    a { color: #d97706; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #e2e8f0; color: #94a3b8; font-size: 0.85rem; text-align: center; }
+    .system-box { background: #f1f5f9; border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    th { background: #f1f5f9; color: #0f172a; padding: 0.8rem; text-align: left; border: 1px solid #e2e8f0; }
+    td { padding: 0.8rem; border: 1px solid #e2e8f0; color: #334155; }
+    tr:nth-child(even) { background: #f8fafc; }
+  
+    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
+    :root {
+      --nav-height: 64px;
+      --nav-bg: rgba(11, 15, 26, 0.88);
+      --footer-bg: #0a0d16;
+      --footer-border: rgba(255,255,255,0.06);
+    }
+    nav#site-nav {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
+      animation: navSlideDown 0.5s ease-out;
+    }
+    @keyframes navSlideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .nav-inner {
+      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
+    }
+    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
+    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
+    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
+    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 3rem 0 1.5rem;
+      border-top: 1px solid var(--footer-border);
+      background: var(--footer-bg);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
+    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
+    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
+    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
+    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { font-size: 0.75rem; color: #475569; }
+
+    /* ===== MOBILE NAV ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .nav-links.mobile-open { display: flex; }
+      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
+      .nav-links a:hover { background: rgba(255,255,255,0.05); }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SPACING FOR ARTICLES (offset for fixed nav) */
+    body { padding-top: var(--nav-height); }
+</style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230d9488%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-family=%22Inter,sans-serif%22 font-weight=%22700%22 font-size=%2216%22>LS</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 14l5 5 9-9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>LifeSystemOS</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/#articles">Articles</a>
+        <a href="/store.html">Store</a>
+        <a href="/tools-comparison.html">Tools</a>
+        <a href="/about.html">About</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Life OS for Remote Workers: Build Your Ultimate Productivity System</h1>
+    <div class="meta">Published: May 17, 2026 | Updated: May 17, 2026 | 9 min read</div>
+
+    <p>Remote work in 2026 is the default for millions of professionals. But here's the problem that nobody talks about: without the structure of an office, your productivity tools can easily become a chaotic mess. You've got Trello for projects, Notion for notes, Google Calendar for meetings, Slack for messages, Todoist for tasks, and a dozen browser tabs open because you can't remember what you were supposed to do next. What you need isn't another app. What you need is a Life OS — an integrated personal productivity system that connects your tasks, calendar, notes, habits, and routines into one seamless workflow. Here's exactly how to build yours.</p>
+
+    <div class="highlight-box">
+      <p><strong>What is a Life OS?</strong> A Life Operating System is a structured framework for managing your time, attention, energy, and information. It's the operating system your brain runs on — designed to reduce decision fatigue, eliminate context switching, and keep you focused on what matters.</p>
+    </div>
+
+    <h2>The Four Layers of a Remote Worker's Life OS</h2>
+    <p>Every great Life OS is built on four layers. Most people only have the first layer (tools) and wonder why they're still overwhelmed. Here's the full stack:</p>
+
+    <table>
+      <tr>
+        <th>Layer</th>
+        <th>Purpose</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>4. Routines & Rituals</td>
+        <td>When and how you work</td>
+        <td>Morning deep work block, afternoon meetings, evening review</td>
+      </tr>
+      <tr>
+        <td>3. Workflow & Process</td>
+        <td>How work flows through your system</td>
+        <td>Inbox → Clarify → Organize → Review → Execute</td>
+      </tr>
+      <tr>
+        <td>2. Structure & Organization</td>
+        <td>Where information lives</td>
+        <td>Areas, projects, tasks, reference, archives</td>
+      </tr>
+      <tr>
+        <td>1. Tools & Apps</td>
+        <td>What you use</td>
+        <td>Calendar, task manager, notes, etc.</td>
+      </tr>
+    </table>
+
+    <p>Most remote workers start at Layer 1 and stop there. They find a great app, plan their entire system around it, and wonder why everything falls apart when the app changes or they get busy. A real Life OS starts from Layer 4 and builds down.</p>
+
+    <h2>Layer 4: Design Your Routines First</h2>
+    <p>Your routines are the foundation of your Life OS. Before you choose a single tool, decide when and how you'll work. For remote workers, we recommend three core daily routines:</p>
+
+    <h3>The Morning Anchor (First 90 Minutes)</h3>
+    <p>Your brain is at peak cognitive capacity for the first 90 minutes after waking. Protect this time at all costs. No email, no Slack, no meetings. Use it for your most important work — the single task that moves the needle most in your role. In 2026, research from the Journal of Organizational Behavior confirms that knowledge workers who protect this "deep work window" produce 3x more output than those who start their day with reactive communication.</p>
+
+    <div class="system-box">
+      <p><strong>Sample Morning Routine:</strong></p>
+      <ul>
+        <li>6:30-7:00 — Wake up, hydrate, 10-min meditation</li>
+        <li>7:00-7:30 — Exercise (walk, run, or yoga)</li>
+        <li>7:30-8:00 — Breakfast, review today's top 3 priorities</li>
+        <li>8:00-9:30 — Deep work block (focus task, no interruptions)</li>
+        <li>9:30-10:00 — Team standup and Slack catch-up</li>
+      </ul>
+    </div>
+
+    <h3>The Mid-Day Reset (Lunch + Recharge)</h3>
+    <p>Remote workers famously skip lunch or eat at their desks. Don't. A true lunch break — away from screens — dramatically improves afternoon productivity. Add a 20-minute power nap or a short walk to reset your energy. Your second work peak (usually 2-4 PM) will be far more productive.</p>
+
+    <h3>The Evening Shutdown (Close the Loop)</h3>
+    <p>This is the most overlooked routine in remote work. Without a commute to signal the end of the workday, remote workers tend to either work late into the evening or leave tasks unfinished in their head. Create a 10-minute shutdown ritual: review what you accomplished, write down tomorrow's top 3 priorities, clear your mental inbox, and close all work apps. This signals to your brain that work is done.</p>
+
+    <h2>Layer 3: Build a Simple Workflow</h2>
+    <p>Your workflow is the engine of your Life OS. We recommend a simplified version of GTD (Getting Things Done) adapted for remote workers:</p>
+
+    <ol>
+      <li><strong>Capture Everything</strong> — Ideas, tasks, requests, and commitments all go into one inbox. Use a single capture tool (we recommend a quick notes app or even a physical notepad).</li>
+      <li><strong>Clarity Daily</strong> — Every morning, process your inbox. For each item, ask: Is it actionable? If no → trash, reference, or someday/maybe. If yes → what's the next action? Can it be done in 2 minutes? Do it now. Otherwise, delegate it or defer it.</li>
+      <li><strong>Organize by Context</strong> — Organize tasks into: Today (must do), This Week (should do), This Month (nice to do), and Waiting (blocked on someone else).</li>
+      <li><strong>Weekly Review</strong> — Every Friday, spend 30 minutes reviewing your system. Process all inboxes, update project lists, review next actions, and set priorities for next week.</li>
+    </ol>
+
+    <div class="highlight-box">
+      <p><strong>Pro Tip:</strong> The 2-minute rule is your best friend. If a task takes less than 2 minutes, do it immediately. This single habit will clear 80% of your daily inbox and prevent small tasks from piling up into overwhelming backlogs.</p>
+    </div>
+
+    <h2>Layer 2: Choose Your Information Structure</h2>
+    <p>This is where most remote workers go wrong. They store everything in one app with no structure, then can't find anything later. Use the PARA Method (Projects, Areas, Resources, Archives) popularized by Tiago Forte:</p>
+
+    <ul>
+      <li><strong>Projects</strong> — Short-term outcomes with deadlines. "Q2 Marketing Campaign," "Website Redesign," "Team Offsite Planning."</li>
+      <li><strong>Areas</strong> — Long-term responsibilities without deadlines. "Health," "Finances," "Career Growth," "Home Maintenance."</li>
+      <li><strong>Resources</strong> — Reference material. "Design Templates," "Industry Research," "Meeting Notes Archive."</li>
+      <li><strong>Archives</strong> — Completed or inactive items. Move things here when they're done.</li>
+    </ul>
+
+    <p>Apply this structure to your task manager AND your notes app. When they share the same organizational logic, moving between tools becomes frictionless.</p>
+
+    <h2>Layer 1: Pick Your Tools (Keep Them Minimal)</h2>
+    <p>With your routines, workflow, and structure defined, now you can choose tools that support them — not the other way around. For remote workers in 2026, this minimal stack works best:</p>
+
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>Recommended Tool</th>
+        <th>Why</th>
+      </tr>
+      <tr>
+        <td>Task Management</td>
+        <td>Todoist or Things 3</td>
+        <td>Fast, keyboard-friendly, PARA-ready</td>
+      </tr>
+      <tr>
+        <td>Notes & Knowledge</td>
+        <td>Notion or Obsidian</td>
+        <td>Flexible, supports PARA, local-first options</td>
+      </tr>
+      <tr>
+        <td>Calendar</td>
+        <td>Google Calendar or Fantastical</td>
+        <td>Time-blocking support, team visibility</td>
+      </tr>
+      <tr>
+        <td>Habit Tracking</td>
+        <td>Streaks or Habitica</td>
+        <td>Simple, visual, gamified motivation</td>
+      </tr>
+      <tr>
+        <td>Focus Timer</td>
+        <td>Forest or Pomodoro timer</td>
+        <td>Blocks distractions, gamifies deep work</td>
+      </tr>
+    </table>
+
+    <div class="highlight-box">
+      <p><strong>Systems over apps:</strong> The best Life OS works even if your favorite app disappears. Your routines and workflows are the real system — apps are just temporary interfaces. Invest in the system, not the tool.</p>
+    </div>
+
+    <h2>The Remote Worker's Weekly Life OS Rhythm</h2>
+    <p>Here's what a complete week looks like with your Life OS running:</p>
+
+    <ul>
+      <li><strong>Sunday evening (20 min):</strong> Weekly preview — review calendar for the week, set top 3 priorities, prepare for Monday's deep work block.</li>
+      <li><strong>Every morning (10 min):</strong> Daily review — process inbox, check calendar, identify today's most important task, do the 2-minute cleanup.</li>
+      <li><strong>Monday (deep focus):</strong> No internal meetings. Pure execution on your top priorities for the week.</li>
+      <li><strong>Tuesday-Thursday (collaboration):</strong> Meetings, calls, collaborative work, and asynchronous communication. Keep mornings protected when possible.</li>
+      <li><strong>Friday (review & planning):</strong> Weekly review, process outstanding items, archive completed projects, plan next week.</li>
+    </ul>
+
+    <h2>Common Life OS Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>App hopping</strong> — Switching tools every month instead of committing to one system. Pick a stack and stick with it for at least 90 days.</li>
+      <li><strong>Over-engineering</strong> — Building a complex system with 50 tags, 15 folders, and automation rules on day one. Start simple and iterate.</li>
+      <li><strong>Ignoring energy management</strong> — A Life OS that doesn't account for your natural energy peaks and troughs will fail. Schedule deep work during high-energy hours and admin work during low-energy periods.</li>
+      <li><strong>No boundaries</strong> — A Life OS without work-life boundaries leads to burnout. Your shutdown ritual isn't optional — it's the most important part of the system.</li>
+      <li><strong>Skipping the weekly review</strong> — The weekly review is what keeps your system from decaying into chaos. Never skip it.</li>
+    </ul>
+
+    <div class="system-box">
+      <p><strong>Your 7-Day Action Plan:</strong></p>
+      <ol>
+        <li>Day 1-2: Define your morning anchor and evening shutdown routines</li>
+        <li>Day 3-4: Create your PARA structure in your notes app and task manager</li>
+        <li>Day 5: Set up your capture inbox and daily processing habit</li>
+        <li>Day 6-7: Do your first weekly review and plan next week</li>
+      </ol>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>The Bottom Line:</strong> Your Life OS isn't about finding the perfect app. It's about creating a system of routines, workflows, and structures that let you do your best work without burning out. Start with your routines (Layer 4), build your workflow (Layer 3), organize your information (Layer 2), and finally choose tools that support it all (Layer 1). Follow this framework, and you'll transform from a overwhelmed remote worker into a focused, high-performing professional with a system that runs itself.</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 <a href="https://lifesystemos.com">LifeSystemOS</a> — Design your life. Run your system.</p>
+    </div>
+  </div>
+<div style="margin-top:40px;padding:20px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;text-align:center;color:white">
+<h3>Get the Full Guide</h3>
+<p>Turn this knowledge into action. Download the complete PDF guide with templates, worksheets, and step-by-step checklists.</p>
+<a href="https://dogeking0.gumroad.com/l/wmbpq" style="display:inline-block;padding:14px 35px;background:#fff;color:#667eea;border-radius:8px;font-weight:bold;text-decoration:none;font-size:18px">Buy Now - $14.99</a>
+</div>
+
+  
+    <div class="highlight-box">
+      <p><strong>Recommended Reading:</strong> Supercharge your productivity system with
+      <a href="https://www.amazon.com/dp/0735211299?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">"Atomic Habits" by James Clear</a> and
+      <a href="https://www.amazon.com/dp/1455586692?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">"Deep Work" by Cal Newport</a>.
+      These two books form the foundation of any effective productivity system — habit design + focused execution.</p>
+    </div>
+
+<!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><span>LifeSystemOS</span></h3>
+          <p>Design your life, one system at a time. Build the productivity framework that fits your unique brain, schedule, and goals.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/">Home</a>
+          <a href="/#articles">Articles</a>
+          <a href="/store.html">Store</a>
+        </div>
+        <div class="footer-col">
+          <h4>Topics</h4>
+          <a href="/#articles">Productivity</a>
+          <a href="/#articles">Notion Templates</a>
+          <a href="/#articles">Time Management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://lifesystemos.com/tools-comparison.html">Tools</a>
+          <a href="https://lifesystemos.com/ultimate-guide.html">Ultimate Guide</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LifeSystemOS. All rights reserved.</p>
+        <p>Built with ☕ and intentionality</p>
+      </div>
+    </div>
+  
+<div class="kit-subscribe-wrapper" style="max-width:500px;margin:2rem auto;">
+  <form action="https://app.kit.com/forms/3e929d2594/subscribe" method="POST" class="kit-subscribe" style="background:#0d3b3b;padding:2rem;border-radius:8px;color:white;max-width:500px;margin:2rem auto;">
+    <h3 style="margin:0 0 0.5rem;font-size:1.25rem;color:#5eead4;">Get the Productivity Hacks Quick Reference</h3>
+    <p style="margin:0 0 1rem;font-size:0.9rem;opacity:0.9;">5 science-backed productivity techniques on one page.</p>
+    <input type="email" name="email" placeholder="Your email address" required style="width:100%;padding:0.75rem;border:1px solid #5eead4;border-radius:4px;margin-bottom:0.75rem;box-sizing:border-box;">
+    <input type="text" name="first_name" placeholder="First name" style="width:100%;padding:0.75rem;border:1px solid #5eead4;border-radius:4px;margin-bottom:0.75rem;box-sizing:border-box;">
+    <button type="submit" style="background:#5eead4;color:#fff;padding:0.75rem 2rem;border:none;border-radius:4px;font-weight:bold;cursor:pointer;width:100%;font-size:1rem;">Send My Free Guide</button>
+    <p style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">No spam. Unsubscribe anytime.</p>
+  </form>
+</div></footer>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('mobile-open');
+      });
+    }
+  });
+  </script>
+
+
+  <div class="cta-section" style="background:linear-gradient(135deg,#4338ca,#3730a3);border-radius:12px;padding:30px;margin:40px 0;text-align:center;color:#fff;"><h3 style="font-size:1.5em;margin-bottom:10px;">Build Your Life OS Today</h3><p style="font-size:1.1em;margin-bottom:15px;color:#c7d2fe;">Get the Life OS Productivity System - Notion templates, time-blocking framework, habit trackers</p><a href="https://dogeking0.gumroad.com/l/wmbpq" style="display:inline-block;background:#f59e0b;color:#fff;font-size:1.2em;font-weight:700;padding:14px 40px;border-radius:50px;text-decoration:none;">Get Your Copy Now -></a><p style="font-size:0.85em;margin-top:12px;color:#c7d2fe;">Instant PDF download - 100+ pages</p></div>
+<script src="/scripts/related-articles.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+<script src="/scripts/affiliate-banner.js"></script>
+</body>
+</html>
