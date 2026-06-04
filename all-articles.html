@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-lifesystemos">
 <head>
 <meta charset="UTF-8">
+<meta name="keywords" content="life OS, productivity system, time management, personal development, articles">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>All Articles — Life System OS</title>
-<meta property="og:image" content="https://lifesystemos.com/og-images/default.html" />
-<meta name="description" content="Browse all 342 articles on Life System OS">
+<meta property="og:image" content="https://lifesystemos.com/assets/og-image.svg" />
+<meta name="description" content="Browse all 348 articles on Life System OS">
+    <meta property="og:title" content="All Articles — Life System OS">
 <link rel="canonical" href="https://lifesystemos.com/all-articles.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-<style>/* All styles from Crown DS */</style>
+<style>:root{--accent:#10B981;--accent-dark:#10B981cc;--accent-light:#10B98144;--surface-dark:#0a0a1a;--surface-mid:#12122e;--surface-light:#1a1a3e;--text-primary:#f5f5ff;--text-body:#c0c0e0;--text-muted:#8080a0;--font-heading:'Playfair Display',serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono',monospace}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -53,9 +55,9 @@ gtag('config', 'G-8CVE2X8R5L');
 }</script>
 <div class="container">
 <h1>All Articles</h1>
-<p style="text-align:center;color:var(--text<div class="article-controls" style="margin-bottom:24px;">
+<p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">All productivity and self-improvement articles in one place.</p><div class="article-controls" style="margin-bottom:24px;">
     <input type="text" placeholder="🔍 Search articles..." />
-    <select class="category-filter">
+    <select class="category-filter" id="category-filter">
         <option value="all">All Categories</option>
     </select>
     <select class="sort-filter">
@@ -66,23 +68,41 @@ gtag('config', 'G-8CVE2X8R5L');
     </select>
 </div>
 <div id="article-grid" class="article-grid" style="margin-bottom:40px;"></div>
-<div id="pagination" class="pagination" style="margin-bottom:60px;"></div>ed a Life Operating System to Stop Feeling Overwhelmed  Life System OS</span><span class="article-arrow">→</span></a>
-</div>
-</div>
+<div id="pagination" class="pagination" style="margin-bottom:60px;"></div>
+
+<!-- Dynamic category population & live count -->
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  if(typeof articles!=='undefined'){
+    var cats={};
+    articles.forEach(function(a){var c=a.category||'uncategorized';cats[c]=(cats[c]||0)+1});
+    var sel=document.getElementById('category-filter');
+    if(sel){
+      Object.keys(cats).sort().forEach(function(c){
+        var opt=document.createElement('option');
+        opt.value=c;
+        opt.textContent=c.charAt(0).toUpperCase()+c.slice(1).replace(/-/g,' ')+' ('+cats[c]+')';
+        sel.appendChild(opt);
+      });
+    }
+    var ac=document.getElementById('article-count');
+    if(ac)ac.textContent=articles.length;
+  }
+});
+</script>
+
 <footer>© 2026 Life System OS. All rights reserved. | <a href="/privacy.html" style="color:#8080a0;">Privacy</a>
 <div class="kit-subscribe-wrapper" style="max-width:500px;margin:2rem auto;">
-  <form action="https://app.kit.com/forms/3e929d2594/subscribe" method="POST" class="kit-subscribe" style="background:#0d3b3b;padding:2rem;border-radius:8px;color:white;max-width:500px;margin:2rem auto;">
-    <h3 style="margin:0 0 0.5rem;font-size:1.25rem;color:#5eead4;">Get the Productivity Hacks Quick Reference</h3>
-    <p style="margin:0 0 1rem;font-size:0.9rem;opacity:0.9;">5 science-backed productivity techniques on one page.</p>
-    <input type="email" name="email" placeholder="Your email address" required style="width:100%;padding:0.75rem;border:1px solid #5eead4;border-radius:4px;margin-bottom:0.75rem;box-sizing:border-box;">
-    <input type="text" name="first_name" placeholder="First name" style="width:100%;padding:0.75rem;border:1px solid #5eead4;border-radius:4px;margin-bottom:0.75rem;box-sizing:border-box;">
-    <button type="submit" style="background:#5eead4;color:#fff;padding:0.75rem 2rem;border:none;border-radius:4px;font-weight:bold;cursor:pointer;width:100%;font-size:1rem;">Send My Free Guide</button>
+  <form action="https://app.kit.com/forms/3e929d2594/subscribe" method="POST" class="kit-subscribe" style="background:var(--surface-light);padding:2rem;border-radius:12px;color:white;max-width:500px;margin:2rem auto;border:1px solid var(--accent-light);">
+    <h3 style="margin:0 0 0.5rem;font-size:1.25rem;color:var(--accent);">🚀 Get the Productivity Hacks Quick Reference</h3>
+    <p style="margin:0 0 1rem;font-size:0.9rem;opacity:0.9;">5 science-backed productivity techniques on one page. Free instant download.</p>
+    <input type="email" name="email" placeholder="Your email address" required style="width:100%;padding:0.75rem;border:1px solid var(--accent);border-radius:6px;margin-bottom:0.75rem;box-sizing:border-box;background:var(--surface-dark);color:var(--text-primary);font-size:1rem;">
+    <input type="text" name="first_name" placeholder="First name" style="width:100%;padding:0.75rem;border:1px solid var(--accent);border-radius:6px;margin-bottom:0.75rem;box-sizing:border-box;background:var(--surface-dark);color:var(--text-primary);font-size:1rem;">
+    <button type="submit" style="background:var(--accent);color:#000;padding:0.85rem 2rem;border:none;border-radius:8px;font-weight:700;cursor:pointer;width:100%;font-size:1.05rem;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Send My Free Guide →</button>
     <p style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">No spam. Unsubscribe anytime.</p>
   </form>
 </div></footer>
 <script src="/articles-data.js"></script>
 <script src="/dynamic-loader.js"></script>
-
-<script src="/scripts/affiliate-banner.js"></script>
 </body>
 </html>
