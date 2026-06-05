@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life OS Quick-Start Guide · LifeSystemOS</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #1a1a2e;
+      background: #f5f0f8;
+      padding: 24px;
+      line-height: 1.5;
+    }
+    .page {
+      max-width: 210mm; min-height: 297mm;
+      margin: 0 auto; background: #fff;
+      border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      padding: 32px 36px;
+      display: flex; flex-direction: column;
+    }
+    .header { text-align: center; margin-bottom: 16px; }
+    .header .badge {
+      display: inline-block; background: #f0e6f6; color: #7b1fa2;
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 8px;
+    }
+    .header h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+    .header h1 span { color: #7b1fa2; }
+    .header p { font-size: 14px; color: #555; margin-top: 4px; }
+    .subtitle { font-size: 12px; color: #888; border-bottom: 2px solid #f0e6f6; padding-bottom: 10px; margin-bottom: 14px; text-align: center; }
+
+    .os-grid { display: flex; gap: 16px; flex: 1; }
+    .os-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+    .pillar {
+      border: 1px solid #e8e0ee; border-radius: 10px; padding: 12px 14px;
+      background: #faf8fc;
+    }
+    .pillar-title {
+      font-size: 13px; font-weight: 700; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .pillar-title .icon { font-size: 16px; }
+    .pillar-steps { list-style: none; }
+    .pillar-steps li {
+      font-size: 12px; padding: 3px 0 3px 18px;
+      position: relative; color: #444;
+    }
+    .pillar-steps li::before {
+      content: '▸'; position: absolute; left: 2px; color: #7b1fa2; font-weight: 700;
+    }
+    .pillar-steps li strong { color: #1a1a2e; }
+
+    .pillar.p1 { border-left: 4px solid #7b1fa2; }
+    .pillar.p2 { border-left: 4px solid #2e7d32; }
+    .pillar.p3 { border-left: 4px solid #e37400; }
+    .pillar.p4 { border-left: 4px solid #1a73e8; }
+
+    .weekly-rhythm {
+      margin-top: 8px; background: #faf8fc; border-radius: 10px;
+      border: 1px solid #e8e0ee; padding: 12px 14px;
+    }
+    .weekly-rhythm h3 { font-size: 13px; font-weight: 700; color: #7b1fa2; margin-bottom: 6px; }
+    .rhythm-grid { display: flex; gap: 6px; flex-wrap: wrap; }
+    .rhythm-day {
+      flex: 1; min-width: 50px; text-align: center;
+      background: #fff; border: 1px solid #e0d8e8; border-radius: 6px;
+      padding: 5px 4px; font-size: 10px;
+    }
+    .rhythm-day .dow { font-weight: 700; color: #7b1fa2; font-size: 11px; display: block; }
+    .rhythm-day .task { color: #555; font-size: 9px; }
+
+    .tip-box {
+      display: flex; gap: 10px; align-items: flex-start;
+      background: #f8f4fc; border-radius: 8px; padding: 10px 14px;
+      margin: 8px 0; font-size: 12px; color: #555;
+    }
+    .tip-box .icon { font-size: 20px; }
+    .tip-box strong { color: #7b1fa2; }
+
+    .footer-form {
+      margin-top: 12px; padding-top: 12px;
+      border-top: 2px dashed #e0d8e8;
+      text-align: center;
+    }
+    .footer-form h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+    .footer-form p { font-size: 12px; color: #666; margin-bottom: 8px; }
+    .form-placeholder {
+      background: #f8f4fc; border: 2px dashed #d0c0e0;
+      border-radius: 8px; padding: 14px 20px;
+      font-size: 12px; color: #666;
+    }
+    .form-placeholder .kit-code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: #fff; border: 1px solid #d0c0e0;
+      border-radius: 4px; padding: 4px 8px; font-size: 11px;
+    }
+    .footer-meta { margin-top: 8px; font-size: 10px; color: #aaa; text-align: center; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; padding: 20px 24px; }
+      .form-placeholder { border: 1px solid #ccc; }
+    }
+  </style>
+
+<link rel="canonical" href="https://lifesystemos.com/lead-magnet-lifeos-guide">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "lead magnet lifeos guide",
+  "url": "https://lifesystemos.com/lead-magnet-lifeos-guide"
+}
+</script>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="badge">Free Download · LifeSystemOS.com</div>
+    <h1>🧠 The <span>Life OS</span> Quick-Start Guide</h1>
+    <p>Build your personal operating system in 4 pillars ” and run your life on autopilot</p>
+  </div>
+  <div class="subtitle">"Your brain is for having ideas, not holding them." ” David Allen</div>
+
+  <div class="os-grid">
+    <div class="os-col">
+      <!-- PILLAR 1 -->
+      <div class="pillar p1">
+        <div class="pillar-title"><span class="icon">��œ�</span> Pillar 1: Capture System</div>
+        <ul class="pillar-steps">
+          <li><strong>Choose ONE inbox</strong> ” Notes app, Notion, or physical notebook. Never more than one.</li>
+          <li><strong>Capture in &lt;30 seconds</strong> ” Any thought, task, idea goes there immediately. No sorting yet.</li>
+          <li><strong>Daily inbox-zero</strong> ” Every evening, process all captured items: Delete, Delegate, Do, Defer.</li>
+          <li><strong>Voice capture</strong> ” Use Siri/Google voice notes for on-the-go captures (driving, shower).</li>
+        </ul>
+      </div>
+      <!-- PILLAR 2 -->
+      <div class="pillar p2">
+        <div class="pillar-title"><span class="icon">��œ‹</span> Pillar 2: Task Engine</div>
+        <ul class="pillar-steps">
+          <li><strong>One master task list</strong> ” Todoist, Things, TickTick… pick ONE, stick with it.</li>
+          <li><strong>Weekly review (Sunday)</strong> ” 20 min. Clear inbox, review projects, plan top-3 for the week.</li>
+          <li><strong>MIT method</strong> ” Each day, define 3 Most Important Tasks. Do those before checking email.</li>
+          <li><strong>Tag by context</strong> ” @home, @office, @errand, @phone. Work on what fits your location.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="os-col">
+      <!-- PILLAR 3 -->
+      <div class="pillar p3">
+        <div class="pillar-title"><span class="icon">��”�œ�</span> Pillar 3: Calendar & Rhythm</div>
+        <ul class="pillar-steps">
+          <li><strong>Time-block your week</strong> ” Deep work (90 min blocks). Meetings (batched). Admin (30 min).</li>
+          <li><strong>Theme your days</strong> ” Monday = planning, Tue-Thu = deep work, Fri = admin/light tasks.</li>
+          <li><strong>Buffer time</strong> ” Block 20% of your calendar as unscheduled buffer. Life happens.</li>
+          <li><strong>Energy-awareness</strong> ” Schedule hard tasks at your peak energy time. Don't fight biology.</li>
+        </ul>
+      </div>
+      <!-- PILLAR 4 -->
+      <div class="pillar p4">
+        <div class="pillar-title"><span class="icon">�”</span> Pillar 4: Review & Improve</div>
+        <ul class="pillar-steps">
+          <li><strong>Daily 5-min closeout</strong> ” What got done? What moved? What's tomorrow's MIT?</li>
+          <li><strong>Weekly 20-min review</strong> ” Inbox zero, calendar review, next week's priorities.</li>
+          <li><strong>Monthly 1-hr audit</strong> ” What's working? What drains energy? Kill 1 bad habit.</li>
+          <li><strong>Quarterly reset</strong> ” Goals check, system tune-up, tools audit. Keep what serves you.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weekly Rhythm -->
+  <div class="weekly-rhythm">
+    <h3>��”�œ� Sample Weekly Rhythm</h3>
+    <div class="rhythm-grid">
+      <div class="rhythm-day"><span class="dow">Mon</span><span class="task">Plan week<br>MIT setup</span></div>
+      <div class="rhythm-day"><span class="dow">Tue</span><span class="task">Deep work<br>No meetings</span></div>
+      <div class="rhythm-day"><span class="dow">Wed</span><span class="task">Deep work<br>+ calls</span></div>
+      <div class="rhythm-day"><span class="dow">Thu</span><span class="task">Deep work<br>Create</span></div>
+      <div class="rhythm-day"><span class="dow">Fri</span><span class="task">Admin<br>Light tasks</span></div>
+      <div class="rhythm-day"><span class="dow">Sat</span><span class="task">Personal<br>No work</span></div>
+      <div class="rhythm-day"><span class="dow">Sun</span><span class="task">Review<br>Next week</span></div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="icon">⚡</span>
+    <div><strong>The 2-Minute Rule:</strong> If a task takes ≤2 minutes, do it immediately. Don't add it to a list. Lists are for tasks, not micro-actions. This alone will save you 2+ hours per week.</div>
+  </div>
+
+  <div class="footer-form">
+    <h3>��œ� Get the Full Life OS Toolkit</h3>
+    <p>Notion template + daily planner printable + automation workflows ” all free.</p>
+    <div class="form-placeholder">
+      �‡� <strong>Kit (ConvertKit) Embed:</strong><br>
+      <span class="kit-code">&lt;script src="https://assets.kit.com/forms/YOUR_FORM_ID/index.js" async&gt;&lt;/script&gt;</span>
+      <br><span style="font-size:11px;color:#999;">��™ Replace <code>YOUR_FORM_ID</code> with your Kit form ID.</span>
+    </div>
+  </div>
+  <div class="footer-meta">LifeSystemOS.com · © 2025 · Life OS Quick-Start Guide v1.1</div>
+</div>
+<div style="margin-top:40px;padding:20px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;text-align:center;color:white">
+<h3>Get the Full Guide</h3>
+<p>Turn this knowledge into action. Download the complete PDF guide with templates, worksheets, and step-by-step checklists.</p>
+<a href="https://dogeking0.gumroad.com/l/wmbpq" style="display:inline-block;padding:14px 35px;background:#fff;color:#667eea;border-radius:8px;font-weight:bold;text-decoration:none;font-size:18px">Buy Now - $14.99</a>
+</div>
+</body>
+</html>

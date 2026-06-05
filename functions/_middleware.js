@@ -1,5 +1,5 @@
-// Cloudflare Pages Function — Domain Redirect Middleware
-// Redirects pages.dev and www subdomains → primary custom domain
+// Cloudflare Pages Function ” Domain Redirect Middleware
+// Redirects pages.dev and www subdomains ��™ primary custom domain
 
 const PRIMARY_DOMAIN = 'lifesystemos.com';
 const ALIAS_DOMAINS = ['www.lifesystemos.com', 'life-system-os.pages.dev'];

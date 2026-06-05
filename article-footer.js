@@ -15,7 +15,7 @@
   
   // Back to top button
   var backBtn = document.createElement('button');
-  backBtn.innerHTML = 'â†‘';
+  backBtn.innerHTML = 'â†â€Ëœ';
   backBtn.id = 'backToTop';
   backBtn.style.cssText = 'position:fixed;bottom:80px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(13,148,136,0.9);color:#fff;border:none;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:all 0.3s ease;z-index:9998;box-shadow:0 4px 15px rgba(0,0,0,0.3)';
   document.body.appendChild(backBtn);
