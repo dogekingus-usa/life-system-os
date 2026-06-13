@@ -49,7 +49,7 @@ function renderArticles(filtered) {
       results.innerHTML = '<div class="search-no-results">No articles found matching "' + q + '"</div>';
     } else {
       results.innerHTML = matches.slice(0, 8).map(a =>
-        `<a href="/articles/${a.slug}.html">ðŸ ${a.title.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<em>$1</em>')}</a>`
+        `<a href="/articles/${a.slug}.html"> ${a.title.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<em>$1</em>')}</a>`
       ).join('');
     }
     results.classList.add('active');
@@ -258,9 +258,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- ===== STICKY SALES BAR ===== -->
 <div id="stickySalesBar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(12,10,29,0.95);backdrop-filter:blur(12px);border-top:1px solid rgba(13,148,136,0.2);padding:0.75rem 1rem;z-index:9999;transform:translateY(100%);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap">
-  <span style="color:#e2e8f0;font-size:0.875rem">ðŸœš Get the <strong style="color:#14b8a6">Complete Toolkit</strong> â€ templates, guides & resources</span>
-  <a href="https://dogeking0.gumroad.com/l/wmbpq" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.25rem;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;border-radius:8px;font-weight:600;font-size:0.813rem;text-decoration:none;transition:all 0.3s">Get It Now â†™</a>
-  <button onclick="document.getElementById('stickySalesBar').style.transform='translateY(100%)'" style="background:none;border:none;color:#64748b;cursor:pointer;font-size:1.2rem;padding:0.25rem">âœ•</button>
+  <span style="color:#e2e8f0;font-size:0.875rem"> Get the <strong style="color:#14b8a6">Complete Toolkit</strong>  templates, guides & resources</span>
+  <a href="https://dogeking0.gumroad.com/l/wmbpq" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.25rem;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;border-radius:8px;font-weight:600;font-size:0.813rem;text-decoration:none;transition:all 0.3s">Get It Now </a>
+  <button onclick="document.getElementById('stickySalesBar').style.transform='translateY(100%)'" style="background:none;border:none;color:#64748b;cursor:pointer;font-size:1.2rem;padding:0.25rem"></button>
 </div>
 <script>
 // Show sticky bar after 5 seconds
