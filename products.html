@@ -258,17 +258,7 @@ footer { background:var(--surface-mid); border-top:1px solid rgba(255,255,255,0.
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 
-<script>
 
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){dataLayer.push(arguments);}
-
-gtag('js', new Date());
-
-gtag('config', 'G-8CVE2X8R5L');
-
-</script>
 
 <!-- Amazon Affiliate Banner -->
 
@@ -309,6 +299,17 @@ gtag('config', 'G-8CVE2X8R5L');
   <a href="https://go.nordvpn.net/aff_c?offer_id=932&aff_id=PLACEHOLDER_NORDVPN_AFFID" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#00C853;color:#003E6B;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">&#x1f6e1;&#xfe0f; Get NordVPN Deal &#x1f517;</a>
   <p style="margin:10px 0 0;font-size:11px;opacity:0.5;">We may earn a commission at no extra cost to you.</p>
 </div>
+
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-8CVE2X8R5L');
+document.addEventListener('click',function(e){
+var t=e.target.closest('a[href*="gumroad.com"],a[href*="kit.com/forms"]');if(!t)return;
+var label=t.href.includes('gumroad')?'Gumroad Product Click':'Kit Form Click';
+gtag('event','conversion',{send_to:'G-8CVE2X8R5L',event_category:'Outbound',event_label:label,value:1});});
+});
+</script>
 </body>
 
 </html>

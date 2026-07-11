@@ -87,12 +87,7 @@ button[type="submit"]{background:linear-gradient(135deg,#0d9488,#8b83ff) !import
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-8CVE2X8R5L');
-</script>
+
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Best Productivity Apps 2026: Expert Reviews & Comparisons","description":"We tested 20+ productivity apps and tools in 2026. Here are our top 3 picks: Todoist for task management, NordVPN for focused security, and the Life OS System for an all-in-one productivity ecosystem.","url":"https://lifesystemos.com/best-productivity-apps-2026-review.html","mainEntityOfPage":"https://lifesystemos.com/best-productivity-apps-2026-review.html","author":{"@type":"Person","name":"Doge King"},"publisher":{"@type":"Organization","name":"Life System OS","url":"https://lifesystemos.com"},"datePublished":"2026-05-22","dateModified":"2026-05-22"}
@@ -467,5 +462,16 @@ gtag('config', 'G-8CVE2X8R5L');
 </div>
 <!-- Amazon Associates Tag -->
 <div style="display:none;"><img src="https://ir-na.amazon-adsystem.com/e/ir?t=dogekingus20-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important;margin:0!important;" /></div>
+
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-8CVE2X8R5L');
+document.addEventListener('click',function(e){
+var t=e.target.closest('a[href*="gumroad.com"],a[href*="kit.com/forms"]');if(!t)return;
+var label=t.href.includes('gumroad')?'Gumroad Product Click':'Kit Form Click';
+gtag('event','conversion',{send_to:'G-8CVE2X8R5L',event_category:'Outbound',event_label:label,value:1});});
+});
+</script>
 </body>
 </html>
