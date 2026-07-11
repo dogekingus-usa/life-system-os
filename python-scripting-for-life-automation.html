@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 =======
 <!DOCTYPE html>
 >>>>>>> 0bd6b77a6a4435345f4d13f5badb0c2064d92fbf
@@ -79,21 +79,21 @@ footer{text-align:center;padding:30px 0;opacity:0.6;font-size:0.85em;border-top:
 <article>
 <h2>1. Why Python Is the Best Language for Life Automation</h2>
 <<<<<<< HEAD
-<p>You don't need to be a software engineer to automate your life. Python â€” the most beginner-friendly programming language on the planet â€” can handle everything from organizing your desktop to paying your bills on time.</p>
+<p>You don't need to be a software engineer to automate your life. Python âEUR" the most beginner-friendly programming language on the planet âEUR" can handle everything from organizing your desktop to paying your bills on time.</p>
 <p>What makes Python perfect for life automation?</p>
 <ul>
-<li><strong>Readable syntax</strong> â€” You can learn the basics in an afternoon</li>
-<li><strong>Massive library ecosystem</strong> â€” Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
-<li><strong>Cross-platform</strong> â€” Windows, Mac, Linux â€” one script runs everywhere</li>
-<li><strong>Free and open source</strong> â€” Zero upfront cost</li>
+<li><strong>Readable syntax</strong> âEUR" You can learn the basics in an afternoon</li>
+<li><strong>Massive library ecosystem</strong> âEUR" Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
+<li><strong>Cross-platform</strong> âEUR" Windows, Mac, Linux âEUR" one script runs everywhere</li>
+<li><strong>Free and open source</strong> âEUR" Zero upfront cost</li>
 =======
-<p>You don't need to be a software engineer to automate your life. Python ” the most beginner-friendly programming language on the planet ” can handle everything from organizing your desktop to paying your bills on time.</p>
+<p>You don't need to be a software engineer to automate your life. Python " the most beginner-friendly programming language on the planet " can handle everything from organizing your desktop to paying your bills on time.</p>
 <p>What makes Python perfect for life automation?</p>
 <ul>
-<li><strong>Readable syntax</strong> ” You can learn the basics in an afternoon</li>
-<li><strong>Massive library ecosystem</strong> ” Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
-<li><strong>Cross-platform</strong> ” Windows, Mac, Linux ” one script runs everywhere</li>
-<li><strong>Free and open source</strong> ” Zero upfront cost</li>
+<li><strong>Readable syntax</strong> " You can learn the basics in an afternoon</li>
+<li><strong>Massive library ecosystem</strong> " Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
+<li><strong>Cross-platform</strong> " Windows, Mac, Linux " one script runs everywhere</li>
+<li><strong>Free and open source</strong> " Zero upfront cost</li>
 >>>>>>> 0bd6b77a6a4435345f4d13f5badb0c2064d92fbf
 </ul>
 <p>The goal isn't to become a programmer. It's to build a personal digital butler that handles the repetitive tasks eating your time.</p>
@@ -137,7 +137,7 @@ for file in downloads.iterdir():
                 target = downloads / category
                 target.mkdir(exist_ok=True)
                 shutil.move(str(file), str(target / file.name))
-                print(f"Moved {file.name} â†’ {category}")
+                print(f"Moved {file.name} â*' {category}")
                 break</code></pre>
 <p><strong>Time saved:</strong> 5 minutes every day. Run it once a day via Task Scheduler.</p>
 <h3>Script 2: Daily Email Digest Sender</h3>
@@ -190,9 +190,9 @@ if upcoming_bills:
     message = "âš  UPCOMING BILLS THIS WEEK:\n\n"
     for bill in upcoming_bills:
 <<<<<<< HEAD
-        message += f"-¡ {bill['name']}: ${bill['amount']} â€” due {bill['due_day']}\n"
+        message += f"-¡ {bill['name']}: ${bill['amount']} âEUR" due {bill['due_day']}\n"
 =======
-        message += f"â–¡ {bill['name']}: ${bill['amount']} ” due {bill['due_day']}\n"
+        message += f"-¡ {bill['name']}: ${bill['amount']} " due {bill['due_day']}\n"
 >>>>>>> 0bd6b77a6a4435345f4d13f5badb0c2064d92fbf
     print(message)
     # Auto-send email or SMS notification</code></pre>
@@ -207,7 +207,7 @@ backup_dest = rf"D:\Backups\Documents_{datetime.now().strftime('%Y%m%d')}"
 
 try:
     shutil.copytree(backup_source, backup_dest)
-    print(f"âœ… Backup created: {backup_dest}")
+    print(f"âœ... Backup created: {backup_dest}")
 except Exception as e:
     print(f"âŒ Backup failed: {e}")</code></pre>
 <h3>Script 5: Habit Tracker with Streak Counter</h3>
@@ -241,15 +241,15 @@ def track_habit(habit_name):
         streak += 1
         check_date -= timedelta(days=1)
 
-    print(f"ðŸ”¥ {habit_name}: {streak}-day streak!")
+    print(f"ðŸ"¥ {habit_name}: {streak}-day streak!")
     return streak</code></pre>
 <h2>4. Scheduling Your Automations</h2>
 <p>Scripts are useless if you don't run them. Use one of these methods:</p>
 <h3>Windows Task Scheduler (Recommended)</h3>
 <ul>
 <li>Open Task Scheduler</li>
-<li>Create Basic Task â†’ Set trigger (daily, weekly, at login)</li>
-<li>Action: Start a program â†’ Browse to <code>python.exe</code></li>
+<li>Create Basic Task â*' Set trigger (daily, weekly, at login)</li>
+<li>Action: Start a program â*' Browse to <code>python.exe</code></li>
 <li>Arguments: Full path to your script</li>
 </ul>
 <h3>Python's Schedule Library (For scripts that run inside Python)</h3>
@@ -276,13 +276,13 @@ while True:
 </tbody></table>
 <h2>6. Common Pitfalls to Avoid</h2>
 <<<<<<< HEAD
-<p><strong>âŒ Over-automating</strong> â€” Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
-<p><strong>âŒ Ignoring error handling</strong> â€” Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
-<p><strong>âŒ Hardcoding sensitive data</strong> â€” Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
+<p><strong>âŒ Over-automating</strong> âEUR" Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
+<p><strong>âŒ Ignoring error handling</strong> âEUR" Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
+<p><strong>âŒ Hardcoding sensitive data</strong> âEUR" Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
 =======
-<p><strong>âŒ Over-automating</strong> ” Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
-<p><strong>âŒ Ignoring error handling</strong> ” Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
-<p><strong>âŒ Hardcoding sensitive data</strong> ” Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
+<p><strong>âŒ Over-automating</strong> " Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
+<p><strong>âŒ Ignoring error handling</strong> " Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
+<p><strong>âŒ Hardcoding sensitive data</strong> " Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
 >>>>>>> 0bd6b77a6a4435345f4d13f5badb0c2064d92fbf
 <pre><code># Bad
 password = "my-real-password123"
@@ -306,9 +306,9 @@ password = os.getenv("EMAIL_PASSWORD")</code></pre>
 <p>That's a 10x return on your time investment. Every single week.</p>
 <h2>Conclusion</h2>
 <<<<<<< HEAD
-<p>Python scripting for life automation isn't about becoming a programmer â€” it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
+<p>Python scripting for life automation isn't about becoming a programmer âEUR" it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
 =======
-<p>Python scripting for life automation isn't about becoming a programmer ” it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
+<p>Python scripting for life automation isn't about becoming a programmer " it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
 >>>>>>> 0bd6b77a6a4435345f4d13f5badb0c2064d92fbf
 <p>Start with one script this weekend. The file organizer takes 15 minutes. Once you taste what automation feels like, you won't stop.</p>
 <p><strong>Your digital butler is waiting. Hire it.</strong></p>
@@ -345,9 +345,9 @@ password = os.getenv("EMAIL_PASSWORD")</code></pre>
 <script src="/scripts/related-articles.js"></script>
 <!-- Amazon Affiliate Banner -->
 <div class="amazon-affiliate-banner" style="background:linear-gradient(135deg,#232f3e,#131921);color:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px;text-align:center;font-family:Arial,sans-serif;">
-  <p style="margin:0 0 10px;font-size:14px;opacity:0.9;">📦 <strong>Support Our Site — Shop on Amazon</strong></p>
+  <p style="margin:0 0 10px;font-size:14px;opacity:0.9;">📦 <strong>Support Our Site -- Shop on Amazon</strong></p>
   <p style="margin:0 0 15px;font-size:13px;opacity:0.7;">We earn a small commission at no extra cost to you when you shop through our links.</p>
-  <a href="https://www.amazon.com/?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#ff9900;color:#232f3e;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">🛒 Shop on Amazon →</a>
+  <a href="https://www.amazon.com/?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#ff9900;color:#232f3e;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">🛒 Shop on Amazon -></a>
   <p style="margin:10px 0 0;font-size:11px;opacity:0.5;">As an Amazon Associate we earn from qualifying purchases.</p>
 </div>
 <!-- Amazon Associates Tag -->
