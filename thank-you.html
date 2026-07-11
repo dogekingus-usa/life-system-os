@@ -11,12 +11,7 @@
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-8CVE2X8R5L');
-</script>
+
 
 <script type="application/ld+json">{
 "@context":"https://schema.org",
@@ -29,7 +24,7 @@ gtag('config', 'G-8CVE2X8R5L');
 <meta property="og:description" content="Thank you for subscribing to Life System OS.">
 <meta property="og:url" content="https://lifesystemos.com/thank-you.html">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://lifesystemos.com/og-images/default.html">
+<meta property="og:image" content="https://lifesystemos.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Thank You | Life System OS">
 <meta name="twitter:description" content="Thank you for subscribing to Life System OS.">
@@ -101,8 +96,25 @@ p{color:#999;font-size:1.1em;line-height:1.6;margin-bottom:10px}
     <button type="submit" style="background:#5eead4;color:#fff;padding:0.75rem 2rem;border:none;border-radius:4px;font-weight:bold;cursor:pointer;width:100%;font-size:1rem;">Send My Free Guide</button>
     <p style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">No spam. Unsubscribe anytime.</p>
   </form>
-</div></footer>
+</div>
+<!-- AFFILIATE DISCLOSURE -->
+<div class="affiliate-disclosure" style="background:#f5f5f5;border-left:4px solid #ccc;padding:10px 15px;margin:20px 0;font-size:0.9em;color:#666;">
+    <p><strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. We may earn a small commission at no extra cost to you if you make a purchase through these links. This helps support our site and allows us to continue providing valuable content. Thank you for your support!</p>
+</div>
+
+</footer>
 
 <script src="/scripts/related-articles.js"></script>
+
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-8CVE2X8R5L');
+document.addEventListener('click',function(e){
+var t=e.target.closest('a[href*="gumroad.com"],a[href*="kit.com/forms"]');if(!t)return;
+var label=t.href.includes('gumroad')?'Gumroad Product Click':'Kit Form Click';
+gtag('event','conversion',{send_to:'G-8CVE2X8R5L',event_category:'Outbound',event_label:label,value:1});});
+});
+</script>
 </body>
 </html>

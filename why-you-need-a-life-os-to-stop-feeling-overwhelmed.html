@@ -87,12 +87,7 @@ button[type="submit"]{background:linear-gradient(135deg,#0d9488,#8b83ff) !import
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-8CVE2X8R5L');
-</script>
+
 
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Why You Need a Life Operating System to Stop Feeling Overwhelmed","description":"Overwhelmed by endless to-do lists, scattered notes, and decision fatigue? Learn how a Life Operating System (Life OS) brings clarity, structure, and calm to your daily life.","url":"https://lifesystemos.com/why-you-need-a-life-os-to-stop-feeling-overwhelmed.html","mainEntityOfPage":"https://lifesystemos.com/why-you-need-a-life-os-to-stop-feeling-overwhelmed.html","author":{"@type":"Person","name":"Doge King"},"publisher":{"@type":"Organization","name":"Life System OS","url":"https://lifesystemos.com"},"datePublished":"2026-05-19","dateModified":"2026-05-20"}
@@ -105,7 +100,7 @@ gtag('config', 'G-8CVE2X8R5L');
 <meta property="og:url" content="https://lifesystemos.com/why-you-need-a-life-os-to-stop-feeling-overwhelmed.html" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Life System OS" />
-<meta property="og:image" content="https://lifesystemos.com/og-images/default.html" />
+<meta property="og:image" content="https://lifesystemos.com/assets/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Why You Need a Life Operating System to Stop Feeling Overwhelmed" />
 <meta name="twitter:description" content="Overwhelmed by endless to-do lists, scattered notes, and decision fatigue? Learn how a Life Operating System (Life OS) brings clarity, structure, and calm to your daily life." />
@@ -334,5 +329,16 @@ gtag('config', 'G-8CVE2X8R5L');
   <a href="https://www.amazon.com/?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#ff9900;color:#232f3e;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">🛒 Shop on Amazon →</a>
   <p style="margin:10px 0 0;font-size:11px;opacity:0.5;">As an Amazon Associate we earn from qualifying purchases.</p>
 </div>
+
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-8CVE2X8R5L');
+document.addEventListener('click',function(e){
+var t=e.target.closest('a[href*="gumroad.com"],a[href*="kit.com/forms"]');if(!t)return;
+var label=t.href.includes('gumroad')?'Gumroad Product Click':'Kit Form Click';
+gtag('event','conversion',{send_to:'G-8CVE2X8R5L',event_category:'Outbound',event_label:label,value:1});});
+});
+</script>
 </body>
 </html>

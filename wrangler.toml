@@ -1,4 +1,0 @@
-# Wrangler Configuration - Life System OS
-name = "life-system-os"
-pages_build_output_dir = "."
-compatibility_date = "2026-05-26"
