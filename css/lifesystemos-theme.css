@@ -1,0 +1,8 @@
+/* lifesystemos.com -- Theme Override for crown-design-system.css */
+:root {
+  --color-primary: #7C3AED;    /* System purple */
+  --color-secondary: #6D28D9;
+  --color-accent: #0EA5E9;     /* Process blue */
+  --color-dark: #0c0a1e;
+  --color-light: #f5f3ff;
+}
