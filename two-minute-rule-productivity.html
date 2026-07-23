@@ -1,6 +1,14 @@
 <!DOCTYPE html><html class="theme-lifesystemos" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>The 2-Minute Rule: Stop Procrastinating on Small Tasks Forever</title>
   <link rel="canonical" href="https://lifesystemos.com/two-minute-rule-productivity">
-<meta name="description" content="The 2-Minute Rule: Stop Procrastinating on Small Tasks Forever"><style>body{font-family:Segoe UI,sans-serif;max-width:800px;margin:0 auto;padding:20px;line-height:1.8;color:#333}h1{color:#6b46c1;border-bottom:3px solid #9f7aea;padding-bottom:10px}h2{color:#2d3748;border-left:4px solid #9f7aea;padding-left:10px;margin-top:30px}.cta{background:linear-gradient(135deg,#6b46c1,#9f7aea);color:#fff;padding:25px;text-align:center;border-radius:10px;margin:30px 0}a{color:#9f7aea;font-weight:500}table{width:100%;border-collapse:collapse;margin:20px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#6b46c1;color:#fff}@media(max-width:600px){body{padding:10px}}</style>
+<meta name="description" content="The 2-Minute Rule: Stop Procrastinating on Small Tasks Forever">
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 
 <script type="application/ld+json">
 {

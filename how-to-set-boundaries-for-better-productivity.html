@@ -10,7 +10,15 @@
 
 <meta property="og:title" content="How to Set Boundaries for Better Productivity: A Complete Guide">
 <meta property="og:description" content="Learn how setting boundaries — with colleagues, family, and yourself — can dramatically improve your focus, energy, and output.">
-<style>body{font-family:'Segoe UI',sans-serif;max-width:800px;margin:0 auto;padding:20px;line-height:1.8;color:#2d2d2d}h1{color:#6c5ce7;border-bottom:3px solid #a29bfe;padding-bottom:10px;font-size:2em}h2{color:#4834d4;border-left:4px solid #a29bfe;padding-left:10px;margin-top:35px}h3{color:#6c5ce7}a{color:#6c5ce7}.cta{background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;padding:25px;text-align:center;border-radius:12px;margin:35px 0}.cta a{color:#ffeaa7;font-weight:bold}.related{background:#f0edff;padding:18px;border-left:4px solid #6c5ce7;margin:25px 0;border-radius:8px}table{width:100%;border-collapse:collapse;margin:20px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#6c5ce7;color:#fff}.tip{background:#f0fff4;padding:15px;border-radius:8px;margin:15px 0}ul,ol{margin:10px 0 20px 25px}li{margin-bottom:6px}@media(max-width:600px){body{padding:10px}}</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Set Boundaries for Better Productivity: A Complete Guide","author":{"@type":"Organization","name":"lifesystemos.com"},"publisher":{"@type":"Organization","name":"lifesystemos.com","url":"https://lifesystemos.com"},"datePublished":"2026-05-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://lifesystemos.com/content/articles/wave5/how-to-set-boundaries-for-better-productivity"}}</script>
 
 <!-- Google Analytics -->

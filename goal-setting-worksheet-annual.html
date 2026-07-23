@@ -5,24 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Annual Goal Planning Worksheet: Life Audit, Vision & Printable Template</title>
   <link rel="canonical" href="https://lifesystemos.com/goal-setting-worksheet-annual">
-<style>
-  body { font-family: 'Inter', 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #2d2d2d; }
-  h1 { color: #6c5ce7; font-size: 2.2em; border-bottom: 3px solid #a29bfe; padding-bottom: 12px; }
-  h2 { color: #4834d4; margin-top: 35px; border-left: 4px solid #a29bfe; padding-left: 12px; }
-  h3 { color: #5a4bd1; margin-top: 28px; }
-  a { color: #6c5ce7; font-weight: 500; }
-  .cta { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 25px; text-align: center; border-radius: 12px; margin: 35px 0; }
-  .cta a { color: #ffeaa7; font-weight: bold; }
-  .related { background: #f0edff; padding: 18px; border-left: 4px solid #6c5ce7; margin: 25px 0; border-radius: 8px; }
-  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
-  th { background: #6c5ce7; color: white; }
-  .worksheet { background: #faf9ff; border: 2px dashed #a29bfe; padding: 25px; border-radius: 12px; margin: 30px 0; }
-  .worksheet h3 { color: #6c5ce7; margin-top: 0; border-bottom: 2px solid #a29bfe; padding-bottom: 8px; }
-  .worksheet td input { width: 95%; padding: 4px; border: 1px solid #ccc; border-radius: 4px; }
-  .rating-box { display: inline-block; width: 35px; height: 35px; line-height: 35px; text-align: center; border: 1px solid #ccc; border-radius: 6px; margin: 2px; background: #fff; }
-  @media (max-width: 600px) { body { padding: 10px; } }
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <meta name="description" content="Annual goal planning worksheet with life areas assessment across 8 categories, yearly vision, quarterly milestones, monthly actions, weekly tasks, and printable review cadence tracker.">
 <meta name="keywords" content="annual goal planning, life areas assessment, goal worksheet printable, yearly vision plan, quarterly milestones, weekly action planning">
 <meta name="robots" content="index, follow">

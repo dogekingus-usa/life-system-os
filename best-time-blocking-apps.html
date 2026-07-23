@@ -17,28 +17,15 @@
   "dateModified": "2026-05-19"
 }
 </script>
-<style>
-  body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; line-height: 1.8; color: #1a1a2e; background: #fafafa; }
-  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0f766e; }
-  h2 { font-size: 1.4rem; margin-top: 2.5rem; color: #0d9488; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
-  h3 { font-size: 1.15rem; margin-top: 1.8rem; color: #115e59; }
-  p { margin: 1.1rem 0; }
-  ul, ol { margin: 1rem 0; padding-left: 1.8rem; }
-  li { margin: 0.5rem 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-  th, td { border: 1px solid #d1d5db; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
-  th { background: #0d9488; color: white; font-weight: 600; }
-  tr:nth-child(even) { background: #f8fafc; }
-  .app-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .app-card h3 { margin-top: 0; color: #0d9488; border: none; }
-  .price { display: inline-block; background: #ecfdf5; color: #065f46; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem; }
-  .badge { display: inline-block; background: #fef3c7; color: #92400e; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
-  .best-for { display: inline-block; background: #e0f2fe; color: #075985; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 500; font-size: 0.85rem; }
-  .highlight { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-  .related { margin: 1rem 0; padding: 0.75rem; background: #f1f5f9; border-radius: 6px; }
-  @media (max-width: 600px) { body { padding: 1rem; } h1 { font-size: 1.5rem; } table { font-size: 0.75rem; } th, td { padding: 0.3rem; } }
-  @media (max-width: 500px) { table { font-size: 0.7rem; display: block; overflow-x: auto; } }
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <meta property="og:title" content="Best Time Blocking Apps Compared 2026: SkedPal, Akiflow, Motion, Reclaim, Google Calendar, Notion Calendar" />
 <meta property="og:description" content="Comprehensive comparison of the best time blocking apps in 2026: SkedPal, Akiflow, Motion, Reclaim, Google Calendar, and Notion Calendar. Pricing, features, AI scheduling, and recommendations by use case." />
 <meta property="og:url" content="https://lifesystemos.com/best-time-blocking-apps.html" />

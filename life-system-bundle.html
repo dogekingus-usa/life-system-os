@@ -9,7 +9,15 @@
 <meta property="og:title" content="Total Life System Bundle">
 <meta property="og:type" content="website">
 
-<style>body{font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:2rem;line-height:1.6}.bundle-card{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:2rem;border-radius:12px;text-align:center;margin:2rem 0}.bundle-card h1{margin:0 0 1rem;font-size:2rem}.btn{display:inline-block;padding:12px 32px;background:white;color:#667eea;text-decoration:none;border-radius:8px;font-weight:bold}</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <script type="application/ld+json">{
 "@context":"https://schema.org",
 "@type":"Article",

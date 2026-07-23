@@ -6,24 +6,15 @@
   <link rel="canonical" href="https://lifesystemos.com/ivy-lee-method-productivity">
 <meta name="description" content="Master the Ivy Lee Method—the legendary 6-step daily productivity system that Charles Schwab paid $25,000 for in 1918. History, science, comparisons, pitfalls, and a 7-day implementation plan.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Ivy Lee Method: The 100-Year-Old Productivity System That Still Works","description":"Master the Ivy Lee Method—the legendary 6-step daily productivity system that Charles Schwab paid $25,000 for in 1918.","author":{"@type":"Person","name":"Life System OS"},"datePublished":"2026-05-19","dateModified":"2026-05-19"}</script>
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#333;max-width:720px;margin:0 auto;padding:20px}
-  h1{font-size:1.8em;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:10px}
-  h2{font-size:1.3em;color:#16213e;margin-top:2em;border-left:4px solid #e94560;padding-left:12px}
-  h3{font-size:1.1em;color:#0f3460}
-  .highlight{background:#fff3f3;border-left:4px solid #e94560;padding:15px;margin:1.5em 0;border-radius:0 6px 6px 0}
-  .step-box{background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:15px;margin:1em 0}
-  .step-box strong{color:#e94560}
-  table{border-collapse:collapse;width:100%;margin:1.5em 0}
-  th,td{border:1px solid #dee2e6;padding:10px;text-align:left}
-  th{background:#16213e;color:#fff}
-  tr:nth-child(even){background:#f8f9fa}
-  ul,ol{padding-left:1.5em}
-  li{margin:0.5em 0}
-  .related{background:#f0f4ff;border-radius:8px;padding:12px 16px;margin:1.5em 0}
-  .related a{color:#e94560;text-decoration:none}
-  .related a:hover{text-decoration:underline}
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <meta property="og:title" content="The Ivy Lee Method: The 100-Year-Old Productivity System That Still Works" />
 <meta property="og:description" content="Master the Ivy Lee Method—the legendary 6-step daily productivity system that Charles Schwab paid $25,000 for in 1918. History, science, comparisons, pitfalls, and a 7-day implementation plan." />
 <meta property="og:url" content="https://lifesystemos.com/ivy-lee-method-productivity.html" />

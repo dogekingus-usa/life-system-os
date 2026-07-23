@@ -6,70 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Free Weekly Planner Template: Organize Your Life in 30 Minutes</title>
   <link rel="canonical" href="https://lifesystemos.com/weekly-planner-template">
-    <style>
-        body { 
-            font-family: 'Inter', 'Segoe UI', sans-serif; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            line-height: 1.8; 
-            color: #2d2d2d; 
-        }
-        h1 { 
-            color: #6c5ce7; 
-            font-size: 2.2em; 
-            border-bottom: 3px solid #a29bfe; 
-            padding-bottom: 12px; 
-        }
-        h2 { 
-            color: #4834d4; 
-            margin-top: 35px; 
-            border-left: 4px solid #a29bfe; 
-            padding-left: 12px; 
-        }
-        a { 
-            color: #6c5ce7; 
-            font-weight: 500; 
-        }
-        .cta { 
-            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); 
-            color: white; 
-            padding: 25px; 
-            text-align: center; 
-            border-radius: 12px; 
-            margin: 35px 0; 
-        }
-        .cta a { 
-            color: #ffeaa7; 
-            font-weight: bold; 
-        }
-        .related { 
-            background: #f0edff; 
-            padding: 18px; 
-            border-left: 4px solid #6c5ce7; 
-            margin: 25px 0; 
-            border-radius: 8px; 
-        }
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 20px 0; 
-        }
-        th, td { 
-            border: 1px solid #ddd; 
-            padding: 10px; 
-            text-align: left; 
-        }
-        th { 
-            background: #6c5ce7; 
-            color: white; 
-        }
-        @media (max-width: 600px) { 
-            body { 
-                padding: 10px; 
-            } 
-        }
-    </style>
+    
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 
   <meta name="description" content="```html Free Weekly Planner Template: Organize Your Life in 30 Minutes body { font-family: 'Inter', 'Segoe UI', sans-serif; max-width: 800px; margin: 0 aut">
   <meta name="keywords" content="free, weekly, planner, template, organize, your, life, in">

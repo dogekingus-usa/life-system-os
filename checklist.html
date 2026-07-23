@@ -10,33 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<style>
-:root{--primary:#0d9488;--bg:#0c0a1d;--surface:#1a1a3e;--surface2:#2a2a5e;--text:#f1f5f9;--text-muted:#94a3b8;--heading-font:'Inter', sans-serif;--body-font:'Inter', sans-serif}
-*{margin:0;padding:0;box-sizing:border-box}img{max-width:100%;height:auto}
-body{font-family:var(--body-font);background:var(--bg);color:var(--text);line-height:1.6}
-header{background:linear-gradient(135deg, #0c0a1d 0%, #1a1a3e 40%, #0d9488 100%);padding:70px 20px 40px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08)}
-header h1{font-family:var(--heading-font);font-size:2.2em;margin-bottom:10px}
-header p{color:var(--text-muted);max-width:600px;margin:0 auto}
-.container{max-width:800px;margin:0 auto;padding:30px 20px 60px}
-.checklist-section{background:var(--surface);border-radius:16px;padding:24px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.06)}
-.checklist-section h3{font-size:1.2em;margin-bottom:16px;color:var(--primary)}
-.checklist-section ul{list-style:none}
-.checklist-section li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.checklist-section li:last-child{border:none}
-.checklist-section label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.95em;color:var(--text)}
-.checklist-section input[type="checkbox"]{margin-top:3px;accent-color:#0d9488;width:18px;height:18px;cursor:pointer}
-.checklist-section input[type="checkbox"]:checked + span{text-decoration:line-through;color:var(--text-muted);opacity:0.6}
-.progress-bar{background:var(--surface2);border-radius:20px;height:10px;margin:20px 0;overflow:hidden}
-.progress-fill{background:linear-gradient(135deg, #0d9488, #14b8a6);height:100%;width:0%;border-radius:20px;transition:width 0.3s}
-.progress-text{text-align:center;font-size:0.85em;color:var(--text-muted);margin-bottom:10px}
-.progress-text span{color:var(--primary);font-weight:600}
-.btn-reset{background:var(--surface2);color:var(--text-muted);border:1px solid rgba(255,255,255,0.1);padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.85em;margin-top:12px;transition:all 0.2s}
-.btn-reset:hover{background:var(--primary);color:#fff}
-.print-btn{background:var(--surface2);color:var(--text-muted);border:1px solid rgba(255,255,255,0.1);padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.85em;margin-top:12px;transition:all 0.2s;margin-left:8px}
-.print-btn:hover{background:var(--primary);color:#fff}
-.footer{text-align:center;padding:30px;color:#444;font-size:0.8em}
-@media(max-width:600px){header h1{font-size:1.5em}}
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <meta property="og:title" content="The Ultimate Productivity System Checklist — lifesystemos.com" />
 <meta property="og:description" content="Your step-by-step checklist to build a Life OS that actually works. Downloadable interactive checklist for lifesystemos.com." />
 <meta property="og:url" content="https://lifesystemos.com/checklist.html" />

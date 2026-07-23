@@ -28,38 +28,15 @@
       }
     }
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f23; color: #e0e0e0; line-height: 1.8; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        header { text-align: center; padding: 40px 0; border-bottom: 2px solid #6c63ff; margin-bottom: 30px; }
-        header h1 { font-size: 2.2em; color: #6c63ff; }
-        .site-name { font-size: 0.9em; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        article h2 { color: #6c63ff; margin: 30px 0 15px; font-size: 1.5em; }
-        article h3 { color: #6c63ff; margin: 25px 0 12px; font-size: 1.2em; opacity: 0.9; }
-        article p { margin-bottom: 16px; font-size: 1.05em; }
-        article ul, article ol { margin: 16px 0 16px 30px; }
-        article li { margin-bottom: 8px; }
-        article blockquote { border-left: 4px solid #6c63ff; padding: 12px 20px; margin: 20px 0; background: #1a1a3e; border-radius: 0 8px 8px 0; font-style: italic; }
-        article pre { background: #1a1a3e; border: 1px solid #6c63ff; border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; font-family: 'Consolas', monospace; font-size: 0.9em; }
-        article code { background: #1a1a3e; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
-        article table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        article th, article td { border: 1px solid #6c63ff; padding: 10px 14px; text-align: left; }
-        article th { background: #1a1a3e; color: #6c63ff; font-weight: 600; }
-        article hr { border: none; border-top: 1px solid #6c63ff; opacity: 0.3; margin: 30px 0; }
-        .cta-box { background: #1a1a3e; border: 1px solid #6c63ff; border-radius: 12px; padding: 30px; text-align: center; margin: 40px 0; }
-        .cta-box h3 { color: #6c63ff; font-size: 1.3em; margin-bottom: 10px; }
-        .cta-box p { margin-bottom: 20px; opacity: 0.9; }
-        .cta-btn { display: inline-block; background: #6c63ff; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05em; }
-        .cta-btn:hover { opacity: 0.9; }
-        footer { text-align: center; padding: 30px 0; opacity: 0.6; font-size: 0.85em; border-top: 1px solid #333; margin-top: 40px; }
-        .toc { background: #1a1a3e; border-radius: 8px; padding: 20px 25px; margin: 20px 0; }
-        .toc h3 { margin-bottom: 10px; }
-        .toc ol { margin-left: 20px; }
-        .toc a { color: #6c63ff; text-decoration: none; }
-        .toc a:hover { text-decoration: underline; }
-        @media (max-width: 600px) { header h1 { font-size: 1.5em; } }
-    </style>
+    
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>

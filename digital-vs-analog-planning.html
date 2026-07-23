@@ -1,9 +1,15 @@
 <!DOCTYPE html><html class="theme-lifesystemos" lang="en"><head><meta charset="UTF-8"><title>Digital vs Analog Planning: 15-Criteria Comparison and Personality-Based Recommendations</title>
   <link rel="canonical" href="https://lifesystemos.com/digital-vs-analog-planning"><meta name="description" content="Digital vs analog planning: comprehensive comparison of Notion, Todoist, Things, TickTick vs bullet journals, Hobonichi, and paper planners. Includes a 15-criteria comparison table, cognitive benefits of handwriting, and personality-based recommendations."><meta name="keywords" content="digital planning, analog planning, Notion, Todoist, bullet journal, Hobonichi, hybrid planning, cognitive benefits handwriting, planning personality types, productivity tools comparison">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Digital vs Analog Planning: 15-Criteria Comparison and Personality-Based Recommendations","description":"Comprehensive comparison of digital vs analog planning with a 15-criteria table, cognitive science of handwriting, and recommendations for every personality type.","author":{"@type":"Person","name":"Life System OS"},"datePublished":"2026-05-19","dateModified":"2026-05-19"}</script>
-<style>
-table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#f0f0f0}th{background:#f0f0f0}tbody tr:nth-child(even){background:#f8f9fa}h2{margin-top:2rem}h3{margin-top:1.5rem}ul,ol{padding-left:1.5rem}li{margin-bottom:0.35rem}.winner-cell{background:#e8f5e9;font-weight:bold}@media(max-width:600px){table{font-size:0.8rem}th,td{padding:4px}}
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 <meta property="og:title" content="Digital vs Analog Planning: 15-Criteria Comparison and Personality-Based Recommendations" />
 <meta property="og:description" content="Digital vs analog planning: comprehensive comparison of Notion, Todoist, Things, TickTick vs bullet journals, Hobonichi, and paper planners. Includes a 15-criteria comparison table, cognitive benefits of handwriting, and personality-based recommendations." />
 <meta property="og:url" content="https://lifesystemos.com/digital-vs-analog-planning.html" />

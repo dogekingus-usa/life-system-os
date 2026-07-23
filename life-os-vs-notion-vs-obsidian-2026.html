@@ -7,118 +7,15 @@
   <link rel="canonical" href="https://lifesystemos.com/life-os-vs-notion-vs-obsidian-2026">
   
     <meta name="description" content="We tested Life OS, Notion, and Obsidian head-to-head for 30 days. Here's the winner for deep focus, task management, and long-term productivity.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; }
-        .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
-        h1 { font-size: 2.2rem; color: #58a6ff; margin-bottom: 0.5rem; line-height: 1.3; }
-        .meta { color: #8b949e; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #21262d; padding-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; }
-        .meta .read-time { background: #1f2937; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
-        h2 { color: #7ee787; font-size: 1.5rem; margin: 2.5rem 0 1rem; }
-        h3 { color: #a5d6ff; font-size: 1.15rem; margin: 1.8rem 0 0.8rem; }
-        p { margin-bottom: 1rem; color: #c9d1d9; }
-        ul, ol { margin: 0 0 1.2rem 1.5rem; color: #c9d1d9; }
-        li { margin-bottom: 0.5rem; }
-        strong { color: #f0883e; }
-        .winner-badge { display: inline-block; background: linear-gradient(135deg, #238636, #2ea043); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-        .comparison-table th { background: #161b22; text-align: left; padding: 12px 16px; border-bottom: 2px solid #30363d; color: #58a6ff; }
-        .comparison-table td { padding: 12px 16px; border-bottom: 1px solid #21262d; }
-        .comparison-table tr:hover { background: #161b22; }
-        .check { color: #3fb950; }
-        .cross { color: #f85149; }
-        .verdict-box { background: linear-gradient(135deg, #161b22, #0d1117); border: 1px solid #30363d; border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid #f0883e; }
-        .verdict-box p { margin-bottom: 0; }
-        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
-        .pros, .cons { padding: 1rem; border-radius: 8px; }
-        .pros { background: #0a2e1a; border: 1px solid #238636; }
-        .cons { background: #2d1517; border: 1px solid #da3633; }
-        .pros h4 { color: #3fb950; margin-bottom: 0.5rem; }
-        .cons h4 { color: #f85149; margin-bottom: 0.5rem; }
-        .pros ul, .cons ul { margin: 0 0 0 1.2rem; }
-        .pros li, .cons li { margin-bottom: 0.3rem; }
-        .cta-box { background: linear-gradient(135deg, #1f2937, #161b22); border: 1px solid #58a6ff; padding: 1.5rem; margin: 2rem 0; border-radius: 10px; text-align: center; }
-        .cta-box h3 { color: #58a6ff; margin-bottom: 0.5rem; }
-        .cta-box p { margin-bottom: 0; color: #c9d1d9; }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, #238636, #2ea043); color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 12px; }
-        .cta-button:hover { background: linear-gradient(135deg, #2ea043, #3fb950); }
-        .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #21262d; color: #8b949e; font-size: 0.85rem; text-align: center; }
-        .highlight { background: #1f2937; border-left: 4px solid #58a6ff; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0; }
-        .highlight p { margin-bottom: 0; }
-        @media (max-width: 600px) { .pros-cons { grid-template-columns: 1fr; } }
     
-    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
-    :root {
-      --nav-height: 64px;
-      --nav-bg: rgba(11, 15, 26, 0.88);
-      --footer-bg: #0a0d16;
-      --footer-border: rgba(255,255,255,0.06);
-    }
-    nav#site-nav {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
-      animation: navSlideDown 0.5s ease-out;
-    }
-    @keyframes navSlideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .nav-inner {
-      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
-      height: 100%; display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
-    }
-    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
-    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
-    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
-    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
-    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
-    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 3rem 0 1.5rem;
-      border-top: 1px solid var(--footer-border);
-      background: var(--footer-bg);
-    }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
-    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
-    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
-    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
-    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
-    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
-    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-    .footer-bottom p { font-size: 0.75rem; color: #475569; }
-
-    /* ===== MOBILE NAV ===== */
-    @media (max-width: 768px) {
-      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-      .nav-links.mobile-open { display: flex; }
-      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
-      .nav-links a:hover { background: rgba(255,255,255,0.05); }
-      .hamburger { display: flex; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid > :first-child { grid-column: 1 / -1; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    /* SPACING FOR ARTICLES (offset for fixed nav) */
-    body { padding-top: var(--nav-height); }
-</style>
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230d9488%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-family=%22Inter,sans-serif%22 font-weight=%22700%22 font-size=%2216%22>LS</text></svg>">
 </head>
 <body>

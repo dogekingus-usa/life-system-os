@@ -21,23 +21,15 @@
   "dateModified": "2026-05-19"
 }
 </script>
-<style>
-  body { font-family: system-ui, -apple-system, sans-serif; max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem; line-height: 1.8; color: #1a1a2e; background: #fafafa; }
-  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0f766e; }
-  h2 { font-size: 1.4rem; margin-top: 2.5rem; color: #0d9488; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
-  h3 { font-size: 1.15rem; margin-top: 1.8rem; color: #115e59; }
-  p { margin: 1.1rem 0; }
-  ul, ol { margin: 1rem 0; padding-left: 1.8rem; }
-  li { margin: 0.5rem 0; }
-  .template-box { background: #f0fdfa; border: 2px solid #0d9488; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
-  .template-box table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-  .template-box th, .template-box td { border: 1px solid #ccfbf1; padding: 0.6rem; text-align: left; font-size: 0.9rem; }
-  .template-box th { background: #0d9488; color: white; }
-  .schedule-box { background: #fffbeb; border: 2px solid #f59e0b; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
-  .highlight { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-  .related { margin: 1rem 0; padding: 0.75rem; background: #f1f5f9; border-radius: 6px; }
-  @media (max-width: 600px) { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
-</style>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
 
 
   <link rel="stylesheet" href="/crown-design-system.css">

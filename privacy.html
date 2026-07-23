@@ -7,7 +7,15 @@
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#0a0a1a;color:#c0c0e0;line-height:1.7;padding:40px 20px;max-width:800px;margin:0 auto}h1{font-family:'Playfair Display',serif;color:#f5f5ff;margin-bottom:24px}h2{color:#f5f5ff;margin:32px 0 12px}p{margin-bottom:16px}a{color:#6366F1}</style></head><body>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        </head><body>
 <h1>⚙️ Life System OS — Privacy Policy</h1>
 <p><strong>Last updated:</strong> June 2026</p>
 <h2>Information We Collect</h2>
