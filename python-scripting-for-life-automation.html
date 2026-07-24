@@ -50,13 +50,13 @@
 </header>
 <article>
 <h2>1. Why Python Is the Best Language for Life Automation</h2>
-<p>You don't need to be a software engineer to automate your life. Python — the most beginner-friendly programming language on the planet — can handle everything from organizing your desktop to paying your bills on time.</p>
+<p>You don't need to be a software engineer to automate your life. Python &#x2014; the most beginner-friendly programming language on the planet &#x2014; can handle everything from organizing your desktop to paying your bills on time.</p>
 <p>What makes Python perfect for life automation?</p>
 <ul>
-<li><strong>Readable syntax</strong> — You can learn the basics in an afternoon</li>
-<li><strong>Massive library ecosystem</strong> — Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
-<li><strong>Cross-platform</strong> — Windows, Mac, Linux — one script runs everywhere</li>
-<li><strong>Free and open source</strong> — Zero upfront cost</li>
+<li><strong>Readable syntax</strong> &#x2014; You can learn the basics in an afternoon</li>
+<li><strong>Massive library ecosystem</strong> &#x2014; Need to send an email? Parse a PDF? Scrape a website? There's a library for that</li>
+<li><strong>Cross-platform</strong> &#x2014; Windows, Mac, Linux &#x2014; one script runs everywhere</li>
+<li><strong>Free and open source</strong> &#x2014; Zero upfront cost</li>
 </ul>
 <p>The goal isn't to become a programmer. It's to build a personal digital butler that handles the repetitive tasks eating your time.</p>
 <h2>2. Setting Up Your Automation Environment</h2>
@@ -99,7 +99,7 @@ for file in downloads.iterdir():
                 target = downloads / category
                 target.mkdir(exist_ok=True)
                 shutil.move(str(file), str(target / file.name))
-                print(f"Moved {file.name} → {category}")
+                print(f"Moved {file.name} &#x2192; {category}")
                 break</code></pre>
 <p><strong>Time saved:</strong> 5 minutes every day. Run it once a day via Task Scheduler.</p>
 <h3>Script 2: Daily Email Digest Sender</h3>
@@ -149,9 +149,9 @@ for bill in BILLS:
         upcoming_bills.append(bill)
 
 if upcoming_bills:
-    message = "⚠ UPCOMING BILLS THIS WEEK:\n\n"
+    message = "&#x26A0; UPCOMING BILLS THIS WEEK:\n\n"
     for bill in upcoming_bills:
-        message += f"□ {bill['name']}: ${bill['amount']} — due {bill['due_day']}\n"
+        message += f"&#x25A1; {bill['name']}: ${bill['amount']} &#x2014; due {bill['due_day']}\n"
     print(message)
     # Auto-send email or SMS notification</code></pre>
 <h3>Script 4: Automated Weekly Backup</h3>
@@ -165,9 +165,9 @@ backup_dest = rf"D:\Backups\Documents_{datetime.now().strftime('%Y%m%d')}"
 
 try:
     shutil.copytree(backup_source, backup_dest)
-    print(f"✅ Backup created: {backup_dest}")
+    print(f"&#x2705; Backup created: {backup_dest}")
 except Exception as e:
-    print(f"❌ Backup failed: {e}")</code></pre>
+    print(f"&#x274C; Backup failed: {e}")</code></pre>
 <h3>Script 5: Habit Tracker with Streak Counter</h3>
 <p><strong>Problem:</strong> Losing momentum on habits.</p>
 <pre><code>import json
@@ -199,15 +199,15 @@ def track_habit(habit_name):
         streak += 1
         check_date -= timedelta(days=1)
 
-    print(f"🔥 {habit_name}: {streak}-day streak!")
+    print(f"&#x1F525; {habit_name}: {streak}-day streak!")
     return streak</code></pre>
 <h2>4. Scheduling Your Automations</h2>
 <p>Scripts are useless if you don't run them. Use one of these methods:</p>
 <h3>Windows Task Scheduler (Recommended)</h3>
 <ul>
 <li>Open Task Scheduler</li>
-<li>Create Basic Task → Set trigger (daily, weekly, at login)</li>
-<li>Action: Start a program → Browse to <code>python.exe</code></li>
+<li>Create Basic Task &#x2192; Set trigger (daily, weekly, at login)</li>
+<li>Action: Start a program &#x2192; Browse to <code>python.exe</code></li>
 <li>Arguments: Full path to your script</li>
 </ul>
 <h3>Python's Schedule Library (For scripts that run inside Python)</h3>
@@ -233,9 +233,9 @@ while True:
 <tr><td>Inbox zero assistant</td><td><code>imaplib</code></td><td>Archive, label, delete emails</td></tr>
 </tbody></table>
 <h2>6. Common Pitfalls to Avoid</h2>
-<p><strong>❌ Over-automating</strong> — Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
-<p><strong>❌ Ignoring error handling</strong> — Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
-<p><strong>❌ Hardcoding sensitive data</strong> — Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
+<p><strong>&#x274C; Over-automating</strong> &#x2014; Don't spend 5 hours automating a 2-minute task you do once a month. Use the "Rule of 5": only automate tasks that take >5 minutes and occur >5 times.</p>
+<p><strong>&#x274C; Ignoring error handling</strong> &#x2014; Scripts break. Always wrap code in try/except blocks so you know when something fails.</p>
+<p><strong>&#x274C; Hardcoding sensitive data</strong> &#x2014; Never put passwords or API keys directly in scripts. Use environment variables or a <code>.env</code> file.</p>
 <pre><code># Bad
 password = "my-real-password123"
 
@@ -257,7 +257,7 @@ password = os.getenv("EMAIL_PASSWORD")</code></pre>
 <p><strong>Weekly time saved after:</strong> 3+ hours  </p>
 <p>That's a 10x return on your time investment. Every single week.</p>
 <h2>Conclusion</h2>
-<p>Python scripting for life automation isn't about becoming a programmer — it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
+<p>Python scripting for life automation isn't about becoming a programmer &#x2014; it's about becoming the CEO of your own life. Each script you write removes one more micro-decision, one more forgotten task, one more mental load from your daily existence.</p>
 <p>Start with one script this weekend. The file organizer takes 15 minutes. Once you taste what automation feels like, you won't stop.</p>
 <p><strong>Your digital butler is waiting. Hire it.</strong></p>
 <p><em>Related reading on Life System OS:</em> <a href="/creating-standard-operating-procedures-for-life.html">Creating Standard Operating Procedures For Life</a> | <a href="/energy-audit-productivity.html">Energy Audit Productivity</a></p>
