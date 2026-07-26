@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,17 +17,7 @@
   "description": "Master deep work in a distracted world. Learn brain-training techniques to rebuild focus, eliminate distractions, and produce your best work in less time.",
   "author": { "@type": "Organization", "name": "Life System OS" },
   "datePublished": "2026-05-19"
-}</script>
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-  <link rel="stylesheet" href="/crown-design-system.css">
+}</script><link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
 <nav>

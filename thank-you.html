@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,18 +6,7 @@
 <title>Thank You | Life System OS</title>
   <link rel="canonical" href="https://lifesystemos.com/thank-you">
 <meta name="description" content="Thank you for subscribing to Life System OS.">
-<meta name="robots" content="noindex">
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-
-<!-- Google Analytics -->
+<meta name="robots" content="noindex"><!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 <script>
 window.dataLayer = window.dataLayer || [];

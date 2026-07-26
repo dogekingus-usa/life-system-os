@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,18 +62,7 @@
             {"@type": "ListItem", "position": 3, "name": "The Ivy Lee Method", "item": "https://lifesystemos.com/articles/wave16/the-ivy-lee-method-100-year-old-productivity-system-still-works-2026.html"}
         ]
     }
-    </script>
-
-    
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-  <link rel="stylesheet" href="/crown-design-system.css">
+    </script><link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
 <nav>

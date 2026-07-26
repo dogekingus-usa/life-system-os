@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,17 +17,7 @@
   "description": "Life systems drift. Every 90 days, run a complete Life System Reset to realign your routines, habits, and environment. This step-by-step guide walks you through a weekend reboot that sets you up for your most productive quarter yet.",
   "author": { "@type": "Organization", "name": "Life System OS" },
   "datePublished": "2026-05-19"
-}</script>
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-  <link rel="stylesheet" href="/crown-design-system.css">
+}</script><link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
 <nav>

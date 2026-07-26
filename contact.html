@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="theme-lifesystemos">
 <head>
 <meta charset="UTF-8">
@@ -9,17 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/crown-design-system.css">
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-</head>
+<link rel="stylesheet" href="/crown-design-system.css"></head>
 <body>
 <header>
 <nav>

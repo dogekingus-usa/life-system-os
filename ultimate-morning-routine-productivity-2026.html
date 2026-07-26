@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,17 +32,7 @@
       {"@type": "ListItem","position": 3,"name": "Morning Routine","item": "https://lifesystemos.com/ultimate-morning-routine-productivity-2026"}
     ]
   }
-  </script>
-  
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-</head>
+  </script></head>
 <body>
   <div class="breadcrumb">
     <a href="/">&#x1F3E0; Home</a><span>&#x203A;</span><a href="/blog/">Blog</a><span>&#x203A;</span><span class="current">Morning Routine</span>

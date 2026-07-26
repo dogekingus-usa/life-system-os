@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,17 +17,7 @@
   "description": "Learn how to use Python scripting for life automation to build your personal digital butler. Automate emails, files, bills, and daily tasks with simple scripts.",
   "author": { "@type": "Organization", "name": "Life System OS" },
   "datePublished": "2026-05-19"
-}</script>
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-  <link rel="stylesheet" href="/crown-design-system.css">
+}</script><link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
 <nav>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-lifesystemos" lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,17 +17,7 @@
   "description": "Use this complete life audit framework to evaluate every area of your life in one weekend. A step-by-step system for clarity, balance, and intentional living.",
   "author": { "@type": "Organization", "name": "Life System OS" },
   "datePublished": "2026-05-19"
-}</script>
-
-            param($m)
-            $css = $m.Groups[2].Value
-            $css = $css -replace '/\*.*?\*/', ''
-            $css = $css -replace '\s+', ' '
-            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-            $css = $css -replace ';\}', '}'
-            $m.Groups[1].Value + $css + $m.Groups[3].Value
-        
-  <link rel="stylesheet" href="/crown-design-system.css">
+}</script><link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
 <nav>
