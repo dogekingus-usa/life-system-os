@@ -22,6 +22,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/crown-design-system.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
@@ -46,9 +47,9 @@ gtag('config', 'G-8CVE2X8R5L');
 </div>
 <div class="nav-search">
 <input type="text" placeholder="Search articles..." id="nav-search-input" oninput="if(window._setFilter)window._setFilter(this.value)">
-<button onclick="document.getElementById('nav-search-input').focus()">&#x1F50D;</button>
+<button onclick="document.getElementById('nav-search-input').focus()">🔍</button>
 </div>
-<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#x2630;</button>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation menu">☰</button>
 </div>
 </nav>
 </header>
@@ -80,7 +81,7 @@ gtag('config', 'G-8CVE2X8R5L');
 
 <main id="main-content"><section class="hero">
 <div class="container">
-<div class="hero-icon">&#x2699;&#xFE0F;</div>
+<div class="hero-icon">⚙️</div>
 <h1>Life System OS</h1>
 <p>Build Your Personal Operating System — curated guides, tools, and systems to help you level up.</p>
 </div>
@@ -104,7 +105,7 @@ gtag('config', 'G-8CVE2X8R5L');
             Showing <strong id="article-count">358</strong> articles
         </p>
         <div class="article-controls">
-            <input type="text" id="search-articles" placeholder="&#x1F50D; Search articles..." />
+            <input type="text" id="search-articles" placeholder="🔍 Search articles..." />
             <select class="category-filter">
                 <option value="all">All Categories</option>
             </select>
@@ -118,17 +119,17 @@ gtag('config', 'G-8CVE2X8R5L');
         <div id="article-grid" class="article-grid"></div>
         <div id="pagination" class="pagination"></div>
     </div>
-</section></section>
+</section>
 
 <section class="cta-section">
 <h2>Ready to Level Up?</h2>
 <p>Unlock premium tools and resources to accelerate your growth.</p>
-<a href="/products.html" class="cta-button">Explore Products &#x2192;</a>
+<a href="/products.html" class="cta-button">Explore Products →</a>
 </section>
 
 <footer>
 <div class="container">
-<div class="footer-copy">&#xA9; 2026 Life System OS. All rights reserved.</div>
+<div class="footer-copy">© 2026 Life System OS. All rights reserved.</div>
 <div class="footer-links">
 <a href="/privacy.html">Privacy</a>
 <a href="/contact.html">Contact</a>
