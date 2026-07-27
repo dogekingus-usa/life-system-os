@@ -213,23 +213,23 @@
         const cat = (a.category || '').toLowerCase();
         const tags = (a.tags || []).join(' ').toLowerCase();
         
-        if (title.includes('bitcoin') || title.includes('doge') || title.includes('meme')) return '🪙';
-        if (title.includes('wallet') || title.includes('security')) return '🔒';
-        if (title.includes('tax') || title.includes('accounting')) return '📊';
-        if (title.includes('airdrop') || title.includes('farming')) return '💎';
-        if (title.includes('defi') || title.includes('staking') || title.includes('yield')) return '🏦';
-        if (title.includes('resume') || title.includes('job') || title.includes('career')) return '📄';
-        if (title.includes('budget') || title.includes('save') || title.includes('finance')) return '💰';
-        if (title.includes('productivity') || title.includes('habit') || title.includes('system')) return '⚡';
-        if (title.includes('remote') || title.includes('work') || title.includes('nomad')) return '🌍';
-        if (title.includes('nft') || title.includes('gaming') || title.includes('web3')) return '🎮';
-        if (title.includes('trading') || title.includes('strategy') || title.includes('position')) return '📈';
-        if (title.includes('exchange') || title.includes('cex') || title.includes('dex')) return '🔄';
-        if (title.includes('guide') || title.includes('beginner') || title.includes('how')) return '📖';
-        if (title.includes('predict') || title.includes('forecast') || title.includes('outlook')) return '🔮';
-        if (title.includes('solana') || title.includes('sol')) return '🌀';
-        if (title.includes('risk') || title.includes('scam') || title.includes('protect')) return '🛡️';
-        return '📝';
+        if (title.includes('bitcoin') || title.includes('doge') || title.includes('meme')) return '\u1FA99';
+        if (title.includes('wallet') || title.includes('security')) return '\u1F512';
+        if (title.includes('tax') || title.includes('accounting')) return '\u1F4CA';
+        if (title.includes('airdrop') || title.includes('farming')) return '\u1F48E';
+        if (title.includes('defi') || title.includes('staking') || title.includes('yield')) return '\u1F3E6';
+        if (title.includes('resume') || title.includes('job') || title.includes('career')) return '\u1F4C4';
+        if (title.includes('budget') || title.includes('save') || title.includes('finance')) return '\u1F4B0';
+        if (title.includes('productivity') || title.includes('habit') || title.includes('system')) return '\u26A1';
+        if (title.includes('remote') || title.includes('work') || title.includes('nomad')) return '\u1F30D';
+        if (title.includes('nft') || title.includes('gaming') || title.includes('web3')) return '\u1F3AE';
+        if (title.includes('trading') || title.includes('strategy') || title.includes('position')) return '\u1F4C8';
+        if (title.includes('exchange') || title.includes('cex') || title.includes('dex')) return '\u1F504';
+        if (title.includes('guide') || title.includes('beginner') || title.includes('how')) return '\u1F4D6';
+        if (title.includes('predict') || title.includes('forecast') || title.includes('outlook')) return '\u1F52E';
+        if (title.includes('solana') || title.includes('sol')) return '\u1F300';
+        if (title.includes('risk') || title.includes('scam') || title.includes('protect')) return '\u1F6E1\uFE0F';
+        return '\u1F4DD';
     }
     
     function escapeHtml(str) {
@@ -252,7 +252,7 @@ function populateCategoryFilter() {
         categories.forEach(cat => {
             const opt = document.createElement('option');
             opt.value = cat;
-            opt.textContent = cat.replace('-', ' ').replace(/\w/g, l => l.toUpperCase());
+            opt.textContent = cat.replace('-', ' ').replace(/\w/g, l => l.toUpperCase());
             filter.appendChild(opt);
         });
     }
