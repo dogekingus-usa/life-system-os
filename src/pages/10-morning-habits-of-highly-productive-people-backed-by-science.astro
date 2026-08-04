@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/10-morning-habits-of-highly-productive-people-backed-by-science.html?raw';
+
+const title = "10 Morning Habits of Highly Productive People Backed by Science | lifesystemos.com";
+const description = "Waking up early isn\u0027t just about gaining an extra hour in your day; it\u0027s also about setting yourself up for success through a series of morning habits that boo";
+const canonical = "https://lifesystemos.com/10-morning-habits-of-highly-productive-people-backed-by-science";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../bodies/404.html?raw';
+
+const title = "404 — Page Not Found | Life System OS";
+const description = "Page not found on Life System OS";
+const canonical = "https://lifesystemos.com/404.html";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

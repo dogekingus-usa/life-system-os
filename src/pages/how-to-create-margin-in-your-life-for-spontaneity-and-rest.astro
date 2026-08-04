@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/how-to-create-margin-in-your-life-for-spontaneity-and-rest.html?raw';
+
+const title = "How to Create Margin in Your Life for Spontaneity and Rest | lifesystemos.com";
+const description = "Creating margin in your life is essential to ensure you have room for spontaneity and rest, both crucial elements for a balanced and fulfilling existence.";
+const canonical = "https://lifesystemos.com/how-to-create-margin-in-your-life-for-spontaneity-and-rest";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

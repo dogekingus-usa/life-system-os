@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/life-os-vs-notion-vs-obsidian-2026.html?raw';
+
+const title = "Life OS vs. Notion vs. Obsidian — Which Productivity System Wins in 2026?";
+const description = "We tested Life OS, Notion, and Obsidian head-to-head for 30 days. Here\u0027s the winner for deep focus, task management, and long-term productivity.";
+const canonical = "https://lifesystemos.com/life-os-vs-notion-vs-obsidian-2026";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

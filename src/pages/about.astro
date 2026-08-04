@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../bodies/about.html?raw';
+
+const title = "About Life System OS — Build Your Personal Operating System";
+const description = "Learn about Life System OS, your guide to building productivity systems, habits, and workflows that actually work.";
+const canonical = "https://lifesystemos.com/about.html";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/ultimate-workspace-setup-guide-ergonomics-environment-flow-state.html?raw';
+
+const title = "The Ultimate Workspace Setup Guide: Ergonomics, Environment, and Flow State";
+const description = "Design the ultimate workspace for peak productivity. Learn ergonomic setup principles, environmental design strategies, and flow state triggers to maximize deep work.";
+const canonical = "https://lifesystemos.com/ultimate-workspace-setup-guide-ergonomics-environment-flow-state";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

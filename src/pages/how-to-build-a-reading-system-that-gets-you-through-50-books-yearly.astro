@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/how-to-build-a-reading-system-that-gets-you-through-50-books-yearly.html?raw';
+
+const title = "How to Build a Reading System That Gets You Through 50 Books Yearly | lifesystemos.com";
+const description = "Building a reading system that helps you complete 50 books yearly might seem daunting at first, but with a well-structured approach, it\u0027s entirely achievable.";
+const canonical = "https://lifesystemos.com/how-to-build-a-reading-system-that-gets-you-through-50-books-yearly";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>
