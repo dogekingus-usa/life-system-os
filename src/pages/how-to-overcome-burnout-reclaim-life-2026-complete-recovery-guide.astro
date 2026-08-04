@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/how-to-overcome-burnout-reclaim-life-2026-complete-recovery-guide.html?raw';
+
+const title = "How to Overcome Burnout in 2026: Complete Recovery Guide to Reclaim Your Energy, Focus \u0026 Life";
+const description = "A complete science-backed burnout recovery guide for 2026. Learn how to recognize the 12 stages of burnout, reset your nervous system, rebuild your energy, and design a Life OS that prevents relapse.";
+const canonical = "https://lifesystemos.com\\how-to-overcome-burnout-reclaim-life-2026-complete-recovery-guide.html";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

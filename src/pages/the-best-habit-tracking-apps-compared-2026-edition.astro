@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/the-best-habit-tracking-apps-compared-2026-edition.html?raw';
+
+const title = "The Best Habit Tracking Apps Compared 2026 Edition | lifesystemos.com";
+const description = "The world of habit tracking has evolved significantly since 2023, with several applications offering innovative features that cater to a diverse range of users";
+const canonical = "https://lifesystemos.com/the-best-habit-tracking-apps-compared-2026-edition";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

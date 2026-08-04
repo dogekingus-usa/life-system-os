@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../bodies/privacy.html?raw';
+
+const title = "Privacy Policy — Life System OS";
+const description = "Privacy Policy — Life System OS. Expert guides, tips, and resources for lifesystemos.com.";
+const canonical = "https://lifesystemos.com/privacy";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

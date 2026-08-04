@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/time-affluence-stop-feeling-rushed.html?raw';
+
+const title = "Time Affluence: How to Stop Feeling Rushed and Start Feeling Like You Have Enough Time | Life System OS";
+const description = "Time affluence is the feeling of having enough time to do what matters. Learn why modern life makes you feel time-poor, and discover a practical system to reclaim the sense of spaciousness in your days without changing your schedule.";
+const canonical = "https://lifesystemos.com/time-affluence-stop-feeling-rushed";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200, height=630, initial-scale=1.0">
+<title>Life System OS &mdash; Operating System</title>
+
+            param($m)
+            $css = $m.Groups[2].Value
+            $css = $css -replace '/\*.*?\*/', ''
+            $css = $css -replace '\s+', ' '
+            $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+            $css = $css -replace ';\}', '}'
+            $m.Groups[1].Value + $css + $m.Groups[3].Value
+        
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="accent-stripe"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="watermark">&#x2699;&#xFE0F;</div>
+
+  <div class="brand">
+    <span class="brand-icon">&#x2699;&#xFE0F;</span>
+    <span class="brand-text">Life System OS<span>| Build Your OS</span></span>
+  </div>
+
+  <div class="title-icon">&#x2699;&#xFE0F;</div>
+  <div class="main-title">
+    Build Your Personal<br><span class="gold">Operating System</span>
+  </div>
+  <div class="divider"></div>
+  <div class="subtitle">lifesystemos.com</div>
+
+  <div class="url-bar">YOUR PERSONAL OS</div>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+<script src="/scripts/affiliate-banner.js"></script>
+</body>
+</html>

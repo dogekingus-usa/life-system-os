@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/ultimate-productivity-system-design-personal-life-os-maximum-output-2026.html?raw';
+
+const title = "The Ultimate Productivity System: How to Design Your Personal Life OS for Maximum Output in 2026";
+const description = "Design your ultimate Personal Life OS in 2026. Master the 5 pillars — Time, Energy, Focus, Systems, Mindset — with step-by-step guides, actionable routines, and proven tools like Notion and Todoist.";
+const canonical = "https://lifesystemos.com/ultimate-productivity-system-design-personal-life-os-maximum-output-2026";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,28 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../bodies/index.html?raw';
+
+const title = "Life System OS — Build Your Personal Operating System";
+const description = "Build Your Personal Operating System — curated guides, tools, and systems to help you level up.";
+const canonical = "https://lifesystemos.com";
 ---
 
-<BaseLayout title="LifeSystemOS — Life Operating System" description="Build your life operating system. Productivity, systems, habits, and clarity.">
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <div class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-brand-500 mb-4">LifeSystemOS</h1>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Build a life operating system that works. Productivity, habits, systems, and mental clarity.
-      </p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="/productivity/" class="block rounded-xl border border-gray-600 bg-dark-700/50 p-6 hover:border-brand-500/50 hover:bg-dark-700 transition-all">
-        <h2 class="text-lg font-semibold text-brand-500 mb-2">Productivity</h2>
-        <p class="text-sm text-gray-400">Systems and strategies that actually work.</p>
-      </a>
-      <a href="/system/" class="block rounded-xl border border-gray-600 bg-dark-700/50 p-6 hover:border-brand-500/50 hover:bg-dark-700 transition-all">
-        <h2 class="text-lg font-semibold text-brand-500 mb-2">Systems</h2>
-        <p class="text-sm text-gray-400">Build your life OS with repeatable systems.</p>
-      </a>
-      <a href="/habits/" class="block rounded-xl border border-gray-600 bg-dark-700/50 p-6 hover:border-brand-500/50 hover:bg-dark-700 transition-all">
-        <h2 class="text-lg font-semibold text-brand-500 mb-2">Habits</h2>
-        <p class="text-sm text-gray-400">Small changes, compounding results.</p>
-      </a>
-    </div>
-  </section>
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+  </div>
 </BaseLayout>

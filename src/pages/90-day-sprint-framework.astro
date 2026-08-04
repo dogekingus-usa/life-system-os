@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/90-day-sprint-framework.html?raw';
+
+const title = "The 90-Day Sprint Framework: How to Achieve 12 Months of Progress in One Quarter | Life System OS";
+const description = "Most people set yearly goals and abandon them by February. The 90-Day Sprint Framework compresses 12 months of progress into a single quarter through focused intensity, clear milestones, and strategic rest.";
+const canonical = "https://lifesystemos.com/90-day-sprint-framework";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

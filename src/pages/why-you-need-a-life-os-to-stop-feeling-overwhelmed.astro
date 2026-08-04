@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/why-you-need-a-life-os-to-stop-feeling-overwhelmed.html?raw';
+
+const title = "Why You Need a Life Operating System to Stop Feeling Overwhelmed  Life System OS";
+const description = "Overwhelmed by endless to-do lists, scattered notes, and decision fatigue? Learn how a Life Operating System (Life OS) brings clarity, structure, and calm to your daily life.";
+const canonical = "https://lifesystemos.com/why-you-need-a-life-os-to-stop-feeling-overwhelmed";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

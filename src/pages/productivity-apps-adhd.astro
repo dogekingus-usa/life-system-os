@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/productivity-apps-adhd.html?raw';
+
+const title = "Best Productivity Apps for ADHD in 2026: Tools That Work With Your Brain";
+const description = "ADHD-friendly productivity apps compared: Todoist, Trello, Notion, Focusmate, Forest, Sunsama. Features for ADHD brains, visual organization, external accountability, time blindness solutions, comparison table, and setup guides.";
+const canonical = "https://lifesystemos.com/productivity-apps-adhd";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

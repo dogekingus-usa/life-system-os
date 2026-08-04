@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/the-7-types-of-rest-every-person-needs-beyond-sleep.html?raw';
+
+const title = "The 7 Types of Rest Every Person Needs (Beyond Sleep) | lifesystemos.com";
+const description = "The 7 Types of Rest Every Person Needs (Beyond Sleep) When we think about rest, sleep often comes to mind first. However, there are several other type";
+const canonical = "https://lifesystemos.com/the-7-types-of-rest-every-person-needs-beyond-sleep";
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'LifeSystemOS' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/all-articles" text="Browse More Articles" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>
