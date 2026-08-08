@@ -1,0 +1,18 @@
+{
+  "site": "lifesystemos.com",
+  "theme": "light",
+  "pairs": [
+    { "fg": "#ffffff", "bg": "#7C3AED", "minRatio": 4.5, "ratio": 5.70, "usage": "CTA buttons, primary fills" },
+    { "fg": "#7C3AED", "bg": "#ffffff", "minRatio": 4.5, "ratio": 5.70, "usage": "links, accents" },
+    { "fg": "#083344", "bg": "#06B6D4", "minRatio": 4.5, "ratio": 5.52, "usage": "badge text on cyan" }
+  ],
+  "forbidden": [
+    { "fg": "#06B6D4", "bg": "#ffffff", "reason": "cyan on white 2.43:1 FAIL - decorative-only" }
+  ],
+  "nonText": [
+    { "fg": "#7C3AED", "bg": "#ffffff", "minRatio": 3.0, "usage": "focus ring / borders / icons" }
+  ],
+  "generated": "2026-08-08",
+  "by": "tailwind-specialist",
+  "source": "DESIGN-SYSTEM-SPEC-v2.md ┬º4.4 (brand-designer script-verified, re-verified 08-08)"
+}
