@@ -1,26 +1,28 @@
 {
-  "name": "life-system-os",
-  "version": "1.0.0",
-  "description": "LifeSystemOS — Life Operating System Guides & Productivity",
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dogekingus-usa/life-system-os.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "astro": "^5.0.0",
-    "@astrojs/tailwind": "^6.0.0",
-    "tailwindcss": "^3.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name":  "life-system-os",
+    "version":  "1.0.0",
+    "description":  "LifeSystemOS â€” Life Operating System Guides \u0026 Productivity",
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "astro dev",
+                    "build":  "astro build",
+                    "preview":  "astro preview"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/dogekingus-usa/life-system-os.git"
+                   },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "dependencies":  {
+                         "@tailwindcss/vite":  "^4.1.0",
+                         "astro":  "^5.0.0",
+                         "tailwindcss":  "^4.1.0"
+                     },
+    "devDependencies":  {
+                            "typescript":  "^5.0.0"
+                        }
 }

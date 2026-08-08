@@ -1,6 +1,7 @@
 ---
-// BaseLayout.astro — LifeSystemOS shared head, meta, fonts, header, footer
+// BaseLayout.astro â€” LifeSystemOS shared head, meta, fonts, header, footer
 import EmailCapture from '../components/EmailCapture.astro';
+import '../styles/global.css';
 export interface Props {
   title: string;
   description: string;
@@ -9,7 +10,7 @@ export interface Props {
 }
 
 const { title, description, image, canonical } = Astro.props;
-const siteTitle = 'LifeSystemOS — Life Operating System';
+const siteTitle = 'LifeSystemOS â€” Life Operating System';
 const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 const cleanPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const canonicalUrl = canonical || `https://lifesystemos.com${cleanPath}`;
@@ -71,7 +72,7 @@ const ogImage = image || 'https://lifesystemos.com/assets/og-image.svg';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-400">
           <div>
             <h3 class="text-brand-500 mb-3 font-semibold">LifeSystemOS</h3>
-            <p>Build your life operating system — productivity, systems, habits, and mental clarity.</p>
+            <p>Build your life operating system â€” productivity, systems, habits, and mental clarity.</p>
           </div>
           <div>
             <h4 class="text-gray-200 mb-3 font-medium">Quick Links</h4>
@@ -102,3 +103,4 @@ const ogImage = image || 'https://lifesystemos.com/assets/og-image.svg';
     </footer>
   </body>
 </html>
+
